@@ -1,0 +1,12 @@
+.gallery {
+  cursor: url(/img/search.svg), auto;
+  div {
+    overflow: hidden;
+  }
+}
+
+.gallery-img {
+  height: 270px;
+  background-size: cover;
+  background-position: center center;
+}

@@ -1,0 +1,18 @@
+.breadcrumb {
+  margin-top: 100px !important;
+}
+
+.breadcrumb-item {
+  display: inline;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.breadcrumb-item + .breadcrumb-item:before {
+  display: block;
+  color: $main-font-color;
+  content: \f105;
+  font-size: 1.2rem;
+}

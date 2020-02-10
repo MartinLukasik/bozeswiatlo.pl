@@ -1,0 +1,194 @@
+// Mobile first styles
+.page-header {
+  color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100px;
+  transition: all 1s, color 0.3s;
+  z-index: 999;
+  padding-left: 3.5%;
+  padding-right: 3.5%;
+  &.sticky {
+    background: #fff;
+    box-shadow: 0 5px 50px 15px rgba(25, 25, 25, 0.2);
+    color: #2f2f2f;
+    height: 80px;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+}
+
+.logo__img {
+  transition: all 1s;
+  height: 70px;
+  .sticky & {
+    height: 65px;
+  }
+}
+
+.nav-toggler {
+  cursor: pointer;
+  span {
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px;
+    display: block;
+    height: 4px;
+    margin-top: 5px;
+    width: 28px;
+    transition-duration: 300ms;
+    .sticky & {
+      background-color: $main-font-color;
+    }
+  }
+  &.active span {
+    &:nth-of-type(1) {
+      transform: rotate3d(0, 0, 1, 45deg);
+      top: 9px;
+    }
+    &:nth-of-type(2) {
+      opacity: 0;
+    }
+    &:nth-of-type(3) {
+      transform: rotate3d(0, 0, 1, -45deg);
+      top: -9px;
+    }
+  }
+}
+
+.main-nav {
+  z-index: 1000;
+}
+
+.responsive-nav {
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+  display: none;
+  flex-direction: column;
+  text-align: left;
+  color: #fff;
+  position: fixed;
+  top: 100px;
+  width: 100%;
+  font-family: $link-font;
+  transition: all 1s;
+  -webkit-animation: slide-in-top 0.5s both;
+  animation: slide-in-top 0.5s both;
+  z-index: 999;
+  .sticky & {
+    top: 80px;
+    background-color: #fff;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.2);
+    color: #2f2f2f;
+  }
+  a {
+    padding: 0.3rem 2rem;
+    font-size: 1.1rem;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-animation: tracking-in-expand 0.7s
+      cubic-bezier(0.215, 0.61, 0.355, 1) 0.34s both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) 0.34s
+      both;
+  }
+}
+.active-nav {
+  display: flex;
+}
+
+.main-nav__links {
+  display: none;
+}
+
+.main-nav__link {
+  font-family: $link-font;
+  transition: all 0.5s;
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  &--active,
+  &:hover {
+    background: $primary-color;
+    color: #fff;
+  }
+}
+
+@media all and (min-width: $sm-viewport) {
+  .page-header {
+    height: 105px;
+    padding-left: 4%;
+    padding-right: 4%;
+    &.sticky {
+      height: 85px;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+  }
+  .logo__img {
+    height: 85px;
+    .sticky & {
+      height: 75px;
+    }
+  }
+}
+
+@media screen and (min-width: $md-viewport) {
+  .main-nav__links {
+    display: flex;
+  }
+  .nav-toggler {
+    display: none;
+  }
+}
+
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
