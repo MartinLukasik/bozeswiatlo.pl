@@ -24,6 +24,7 @@
   height: 70px;
   .sticky & {
     height: 65px;
+    filter: invert(1);
   }
 }
 
