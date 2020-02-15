@@ -21,7 +21,7 @@
 
   &:before,
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -2;
     transition: all 250ms ease-out;
