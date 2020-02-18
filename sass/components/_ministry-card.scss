@@ -1,13 +1,13 @@
 @use 'sass:color';
 
-$service-photo-height: 12rem;
+$ministry-photo-height: 12rem;
 
 $border-radius: 3px;
 $timing-1: 0.4s 0.15s;
 $timing-2: 0.5s 0.25s;
 
-.service-card {
-  @include size($service-card-width, $service-card-height);
+.ministry-card {
+  @include size($ministry-card-width, $ministry-card-height);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
   overflow: hidden;
@@ -15,19 +15,19 @@ $timing-2: 0.5s 0.25s;
   text-align: initial; // FIXME
 }
 
-.service-photo {
-  @include size(auto, $service-photo-height);
+.ministry-photo {
+  @include size(auto, $ministry-photo-height);
   background-position: center;
   background-size: cover;
   border-radius: $border-radius;
 }
-.service-info {
-  @include size(auto, $service-card-height);
+.ministry-info {
+  @include size(auto, $ministry-card-height);
   position: relative;
   padding: 14px 24px;
   transition: all $timing-1;
   background-color: #fff;
-  .service-title {
+  .ministry-title {
     position: relative;
     margin: 8px 0;
     color: $main-font-color;
@@ -35,9 +35,9 @@ $timing-2: 0.5s 0.25s;
     text-transform: uppercase;
     text-shadow: 0 0 0px lighten($main-font-color, 20);
   }
-  .service-date,
-  .service-time,
-  .service-location {
+  .ministry-date,
+  .ministry-time,
+  .ministry-location {
     margin-bottom: 0.4rem;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -47,8 +47,8 @@ $timing-2: 0.5s 0.25s;
       margin-right: 0.5rem;
     }
   }
-  .service-time,
-  .service-location {
+  .ministry-time,
+  .ministry-location {
     margin-right: 0.4rem;
     display: inline-block;
     opacity: 0;
@@ -61,7 +61,7 @@ $timing-2: 0.5s 0.25s;
     opacity: 0;
     transition: $timing-2;
   }
-  .service-link {
+  .ministry-link {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -77,12 +77,12 @@ $timing-2: 0.5s 0.25s;
   }
 }
 
-.service-card:hover .service-info {
-  transform: translateY(-$service-photo-height);
-  .service-time,
-  .service-location,
+.ministry-card:hover .ministry-info {
+  transform: translateY(-$ministry-photo-height);
+  .ministry-time,
+  .ministry-location,
   .txt,
-  .service-link {
+  .ministry-link {
     opacity: 1;
   }
 }
