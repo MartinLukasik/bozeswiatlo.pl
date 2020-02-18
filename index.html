@@ -25,7 +25,9 @@
     <header class="page-header row no-gutters center-xs middle-xs">
       <nav class="main-nav col-xs-12 row middle-xs between-xs">
         <div class="logo">
-          <img class="logo__img" src="img/logo/logo-white.png" alt="" />
+          <a href="index.html"
+            ><img class="logo__img" src="img/logo/logo-white.png" alt=""
+          /></a>
         </div>
         <ul class="main-nav__links">
           <li>
@@ -54,6 +56,8 @@
         <a href="contact.html">Контакт</a>
       </div>
     </header>
+
+    <!-- FullScreen Slider -->
     <div class="wrapper">
       <div class="bg-1"></div>
     </div>
@@ -70,12 +74,12 @@
         <div class="section-title-container" data-aos="zoom-in">
           <h2 class="section-title">Добро пожаловать в нашу Церковь</h2>
           <p class="section-subtitle">
-            О нас: Искренность. Верность. Жертвенность.
+            Искренность. Верность. Жертвенность.
           </p>
         </div>
         <div class="row">
           <div class="col-xs-12 col-lg-6" data-aos="fade-right">
-            <img class="about-image" src="img/bg-1.jpg" alt="" />
+            <img class="about-image" src="img/about.jpg" alt="" />
           </div>
           <div class="col-xs-12 col-lg-6 row middle-xs" data-aos="fade-up">
             <div class="about-content">
@@ -107,7 +111,7 @@
           </p>
         </div>
         <div class="row center-xs cols-fixed no-gutters">
-          <div class="ministry-card col-xs">
+          <div class="ministry-card col-xs" data-aos="zoom-in">
             <div
               class="ministry-img"
               style="background-image: url(/img/ministries/1.jpg)"
@@ -129,7 +133,11 @@
             </div>
           </div>
 
-          <div class="ministry-card col-xs">
+          <div
+            class="ministry-card col-xs"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
             <div
               class="ministry-img"
               style="background-image: url(/img/gallery/photo2.jpg)"
@@ -153,7 +161,11 @@
             </div>
           </div>
 
-          <div class="ministry-card col-xs">
+          <div
+            class="ministry-card col-xs"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
             <div
               class="ministry-img"
               style="background-image: url(/img/ministries/3.jpg)"
@@ -175,7 +187,7 @@
             </div>
           </div>
 
-          <div class="ministry-card col-xs">
+          <div class="ministry-card col-xs" data-aos="zoom-in">
             <div
               class="ministry-img"
               style="background-image: url(/img/ministries/4.jpg)"
@@ -197,7 +209,11 @@
             </div>
           </div>
 
-          <div class="ministry-card col-xs">
+          <div
+            class="ministry-card col-xs"
+            data-aos="zoom-in"
+            data-aos-delay="200"
+          >
             <div
               class="ministry-img"
               style="background-image: url(/img/gallery/photo2.jpg)"
@@ -218,6 +234,32 @@
               <a class="ministry-link" href="ministries.html">Детали</a>
             </div>
           </div>
+
+          <div
+            class="ministry-card col-xs"
+            data-aos="zoom-in"
+            data-aos-delay="400"
+          >
+            <div
+              class="ministry-img"
+              style="background-image: url(/img/gallery/photo2.jpg)"
+            ></div>
+            <div class="ministry-info">
+              <h2 class="ministry-title">Уличная евангелизация</h2>
+              <h3 class="ministry-date">
+                <i class="far fa-calendar-alt"></i>Каждую Пятницу
+              </h3>
+              <h3 class="ministry-time"><i class="far fa-clock"></i>18:30</h3>
+              <h3 class="ministry-location">
+                <i class="fas fa-map-marker-alt"></i>Plac Litewski
+              </h3>
+              <p class="txt">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Aliquam, quos?
+              </p>
+              <a class="ministry-link" href="ministries.html">Детали</a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -228,6 +270,7 @@
         <h2>Some text...</h2>
       </section>
 
+      <!-- Bible Quote -->
       <div class="quote">
         <div class="container">
           <div class="quote-quote"></div>
@@ -269,8 +312,8 @@
 
     <!-- Footer -->
     <footer>
-      <div class="main-footer">
-        <div class="footer-logo">
+      <div class="main-footer row">
+        <div class="footer-logo col-xs-12 col-sm-6 col-lg-3">
           <div class="footer-logo">
             <img src="img/logo/logo-white.png" alt="" />
           </div>
@@ -278,7 +321,7 @@
             Наша цель: Достигать. Учить. Вдохновлять. Жизнь рождает жизнь!
           </p>
         </div>
-        <div class="footer-links">
+        <div class="footer-links col-xs-12 col-sm-6 col-lg-3">
           <h4>Быстрые ссылки</h4>
           <nav>
             <ul class="footer-nav">
@@ -306,7 +349,7 @@
             </ul>
           </nav>
         </div>
-        <div class="footer-blog">
+        <div class="footer-blog col-xs-12 col-sm-6 col-lg-3">
           <h4>Lates news</h4>
           <div class="single-blog-entry">
             <a href="#">Some news title</a>
@@ -321,7 +364,7 @@
             </p>
           </div>
         </div>
-        <div class="footer-contact">
+        <div class="footer-contact col-xs-12 col-sm-6 col-lg-3">
           <h4>Свяжитесь с нами</h4>
           <ul class="contact-info">
             <li class="contact-item">
@@ -347,7 +390,7 @@
           </ul>
         </div>
       </div>
-      <div class="copywrite"></div>
+      <div class="copyright">Copyright &copy; 2020 All rights reserved</div>
     </footer>
     <script src="js/main-page.js"></script>
   </body>

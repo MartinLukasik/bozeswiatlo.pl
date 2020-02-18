@@ -1,16 +1,18 @@
 .main-footer {
   color: $footer-font-color;
   background: $footer-background-color;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
   padding: 4rem 1rem;
+  margin-top: 6rem;
   & > * {
-    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
   }
   h4 {
     color: #fff;
     font-size: 1.5rem;
+    margin-bottom: 0.6rem;
   }
 }
 
@@ -19,13 +21,16 @@
     height: auto;
     width: 100%;
     max-width: 310px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.6rem;
   }
 }
 
 .footer-nav {
   display: flex;
   flex-wrap: wrap;
+  padding-left: 10%;
   & > * {
     flex: 50%;
   }
@@ -37,9 +42,6 @@
 
 .single-blog-entry {
   font-size: 1.1rem;
-  a {
-    text-decoration: none;
-  }
   span {
     margin-left: 0.4rem;
     font-size: 0.9rem;
@@ -51,6 +53,14 @@
   i {
     margin-right: 0.4rem;
   }
+}
+
+.copyright {
+  color: #fff;
+  background-color: $footer-background-dark-color;
+  text-align: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 // Icon animations

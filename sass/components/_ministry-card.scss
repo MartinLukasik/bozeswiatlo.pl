@@ -86,3 +86,9 @@ $timing-2: 0.5s 0.25s;
     opacity: 1;
   }
 }
+
+@media screen and (max-width: $sm-viewport) {
+  .ministry-card[data-aos-delay] {
+    transition-delay: 0s !important;
+  }
+}
