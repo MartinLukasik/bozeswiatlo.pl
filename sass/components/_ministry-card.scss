@@ -1,6 +1,6 @@
 @use 'sass:color';
 
-$ministry-photo-height: 12rem;
+$ministry-img-height: 12rem;
 
 $border-radius: 3px;
 $timing-1: 0.4s 0.15s;
@@ -15,8 +15,8 @@ $timing-2: 0.5s 0.25s;
   text-align: initial; // FIXME
 }
 
-.ministry-photo {
-  @include size(auto, $ministry-photo-height);
+.ministry-img {
+  @include size(auto, $ministry-img-height);
   background-position: center;
   background-size: cover;
   border-radius: $border-radius;
@@ -78,7 +78,7 @@ $timing-2: 0.5s 0.25s;
 }
 
 .ministry-card:hover .ministry-info {
-  transform: translateY(-$ministry-photo-height);
+  transform: translateY(-$ministry-img-height);
   .ministry-time,
   .ministry-location,
   .txt,

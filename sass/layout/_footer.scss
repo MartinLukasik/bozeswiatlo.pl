@@ -5,6 +5,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 4rem 1rem;
+  & > * {
+    flex: 1;
+  }
   h4 {
     color: #fff;
     font-size: 1.5rem;
