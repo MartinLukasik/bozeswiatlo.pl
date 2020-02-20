@@ -7,6 +7,7 @@ let slideInterval;
 
 const nextSlide = () => {
   const current = document.querySelector('.current');
+  current.firstElementChild.classList.remove('animation-paused');
   if (current.nextElementSibling) {
     current.nextElementSibling.classList.add('current');
   } else {
@@ -17,6 +18,7 @@ const nextSlide = () => {
 
 const prevSlide = () => {
   const current = document.querySelector('.current');
+  current.classList.remove('animation-paused');
   if (current.previousElementSibling) {
     current.previousElementSibling.classList.add('current');
   } else {
@@ -38,3 +40,13 @@ prev.addEventListener('click', () => {
 });
 
 slideInterval = setInterval(nextSlide, intervalTime);
+
+// Animation stoping on scroll
+window.addEventListener('scroll', () => {
+  const current = document.querySelector('.current');
+  if (window.scrollY) {
+    current.firstElementChild.classList.add('animation-paused');
+  } else {
+    current.firstElementChild.classList.remove('animation-paused');
+  }
+});

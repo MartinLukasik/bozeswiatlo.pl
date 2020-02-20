@@ -128,6 +128,6 @@ button#next {
   }
 }
 
-// .animation-paused {
-//   animation: bg-scaling 10s ease-out both paused, fade 1.5s ease-out;
-// }
+.animation-paused {
+  animation-play-state: paused !important;
+}
