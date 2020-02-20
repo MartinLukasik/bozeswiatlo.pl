@@ -15,7 +15,8 @@
     "aos": "^2.3.4"
   },
   "scripts": {
-    "start": "parcel index.html --no-hmr --open",
-    "build": "parcel build index.html"
+    "dev": "parcel index.html --no-hmr",
+    "devopen": "parcel index.html --no-hmr --open",
+    "prod": "parcel build index.html"
   }
 }
