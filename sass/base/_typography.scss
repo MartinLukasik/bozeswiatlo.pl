@@ -1,2 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i&display=swap');
+
+html {
+  font-family: $main-font;
+  color: $main-font-color;
+}
+
+i {
+  color: $primary-color;
+}
+
+.p {
+  text-align: justify;
+  &::first-letter {
+    margin-left: 2rem;
+  }
+}
+
+@media (min-width: $lg-viewport) {
+  html {
+    font-size: 110%;
+  }
+}

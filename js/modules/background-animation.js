@@ -13,9 +13,8 @@ import imgSrc from '../../img/canvas-bg.jpg';
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 let width = (canvas.width = window.innerWidth);
-let height = (canvas.height = window.innerHeight);
+let height = (canvas.height = window.innerHeight * 0.55);
 const img = new Image();
-const useGrid = true;
 const imgInfo = {};
 const imgs = [];
 const grids = [];
@@ -37,9 +36,7 @@ const init = function() {
       Math.ceil(window.innerWidth / imgInfo.width) *
       Math.ceil(window.innerHeight / imgInfo.height);
 
-    if (useGrid) {
-      createGrid();
-    }
+    createGrid();
     populateCanvas(numberToShow * 4);
 
     // Image is ready and we're ready to go
