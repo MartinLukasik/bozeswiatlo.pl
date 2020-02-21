@@ -3,8 +3,9 @@
   height: $height;
 }
 
-@mixin center-margin($container-width) {
+@mixin center-margin($container-width, $container-height: null) {
   width: $container-width;
+  height: $container-height;
   margin-left: auto;
   margin-right: auto;
 }

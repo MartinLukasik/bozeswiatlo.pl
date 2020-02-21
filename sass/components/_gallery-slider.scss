@@ -1,0 +1,115 @@
+$time: 500ms;
+$delay: $time/2;
+$mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
+
+.slider-container {
+  position: relative;
+  @include center-margin(90vw, 330px);
+}
+
+.slider-content {
+  position: relative;
+  @include center-margin(80%, 90%);
+}
+
+.slider-single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  @include size(100%, 100%);
+  z-index: 0;
+  left: 0;
+  top: 0;
+  transition: z-index 0ms $delay;
+  &.preactive {
+    z-index: 1;
+    .slider-single-image {
+      opacity: 0.4;
+      transform: translateX(-25%) scale(0.8);
+    }
+  }
+  &.active {
+    z-index: 2;
+    .slider-single-image {
+      opacity: 1;
+      transform: translateX(0%) scale(1);
+    }
+  }
+  &.proactive {
+    z-index: 1;
+    .slider-single-image {
+      opacity: 0.4;
+      transform: translateX(25%) scale(0.8);
+    }
+  }
+}
+
+.slider-single-image {
+  position: relative;
+  left: 0;
+  top: 0;
+  @include size(auto, 100%);
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.2);
+  transition: $time $mode;
+  transform: scale(0);
+  opacity: 0;
+}
+
+.slider-left,
+.slider-right {
+  position: absolute;
+  z-index: 3;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px 15px;
+  border: 2px solid $primary-color;
+  margin-left: -2px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.slider-left {
+  right: 90%;
+}
+
+.slider-right {
+  left: 90%;
+}
+
+.bullet-container {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bullet {
+  margin-right: 14px;
+  &:last-child {
+    margin-right: 0px;
+  }
+  @include size(20px, 20px);
+  border-radius: 50%;
+  background-color: $main-font-color;
+  opacity: 0.5;
+  &.active {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: $sm-viewport) {
+  .slider-container {
+    @include size(60vw, 500px);
+  }
+}
+
+@media screen and (min-width: $md-viewport) {
+  .slider-container {
+    @include size(45vw, 500px);
+  }
+}

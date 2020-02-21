@@ -47,24 +47,24 @@ const init = function() {
   return (img.src = imgSrc);
 };
 
-var addListeners = function() {
+let addListeners = function() {
   window.addEventListener('resize', resizeCanvas);
   window.addEventListener('mousemove', updateMouse);
   return window.addEventListener('touchmove', updateMouse);
 };
 
-var updateMouse = function(e) {
+let updateMouse = function(e) {
   mouse.x = e.clientX;
   return (mouse.y = e.clientY);
 };
 
-var resizeCanvas = function() {
+let resizeCanvas = function() {
   width = canvas.width = window.innerWidth;
   return (height = canvas.height = window.innerHeight);
 };
 
 // Magic
-var populateCanvas = function(nb) {
+let populateCanvas = function(nb) {
   let i = 0;
   return (() => {
     const result = [];
@@ -77,7 +77,7 @@ var populateCanvas = function(nb) {
   })();
 };
 
-var createGrid = function() {
+let createGrid = function() {
   const imgScale = 0.5;
   const grid = {
     row: Math.ceil(window.innerWidth / (imgInfo.width * imgScale)),
@@ -107,7 +107,7 @@ var createGrid = function() {
   return __range__(0, grids.length, false).map(i => grids[i].draw());
 };
 
-var gridItem = function(x, y, w, h) {
+let gridItem = function(x, y, w, h) {
   if (x == null) {
     x = 0;
   }
@@ -119,7 +119,7 @@ var gridItem = function(x, y, w, h) {
   };
 };
 
-var Photo = function() {
+let Photo = function() {
   const seed = Math.random() * (2.5 - 0.7) + 0.7;
   const w = imgInfo.width / seed;
   const h = imgInfo.height / seed;
@@ -158,7 +158,7 @@ var Photo = function() {
     rotateAndPaintImage(ctx, img, r * TO_RADIANS, x, y, w / 2, h / 2, w, h);
 };
 
-var rotateAndPaintImage = function(
+let rotateAndPaintImage = function(
   context,
   image,
   angle,
@@ -176,7 +176,7 @@ var rotateAndPaintImage = function(
   return context.translate(-positionX, -positionY);
 };
 
-var render = function() {
+let render = function() {
   let x = 0;
   let y = 0;
   ctx.clearRect(0, 0, width, height);
