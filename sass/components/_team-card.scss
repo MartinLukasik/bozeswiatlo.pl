@@ -43,3 +43,9 @@ $team-card-bg-color: #efefef;
   color: #777777;
   font-weight: 300;
 }
+
+@media screen and (max-width: $sm-viewport) {
+  .team-card[data-aos-delay] {
+    transition-delay: 0s !important;
+  }
+}
