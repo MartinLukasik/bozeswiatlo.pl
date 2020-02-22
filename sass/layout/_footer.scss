@@ -34,40 +34,10 @@ footer {
   }
 }
 
-.contact-info {
-}
-
 .copyright {
   color: #fff;
   background-color: $footer-background-dark-color;
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-
-// Icon animations
-/* Icon Pop */
-@keyframes contact-item {
-  50% {
-    transform: scale(1.3);
-  }
-}
-.contact-item {
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  transition-duration: 0.3s;
-}
-.contact-item .contact-icon {
-  transform: translateZ(0);
-  transition-duration: 0.3s;
-  transition-property: transform;
-  transition-timing-function: ease-out;
-}
-.contact-item:hover .contact-icon,
-.contact-item:focus .contact-icon,
-.contact-item:active .contact-icon {
-  animation-name: contact-item;
-  animation-duration: 0.3s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
 }
