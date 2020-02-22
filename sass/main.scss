@@ -4,6 +4,7 @@
 @import 'abstracts/variables', 'abstracts/mixins';
 
 // 2. Vendors
+@import 'vendors/flexboxgrid';
 
 // 3. Base stuff
 @import 'base/reset', 'base/base', 'base/typography', 'base/helpers';

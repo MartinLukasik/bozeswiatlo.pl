@@ -1,7 +1,5 @@
 .container {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  @include center-margin(90%);
 }
 
 @media all and (min-width: $md-viewport) {
@@ -20,4 +18,8 @@
 
 .cols-fixed > * {
   flex: initial;
+}
+
+.align-center {
+  text-align: center;
 }
