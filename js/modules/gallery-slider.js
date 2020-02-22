@@ -1,4 +1,4 @@
-const slide = document.querySelectorAll('.slider-single');
+const slide = document.querySelectorAll('.gallery-slide');
 const slideTotal = slide.length - 1;
 let slideCurrent = -1;
 
