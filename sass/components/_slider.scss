@@ -4,7 +4,7 @@ $slide-text-height: 7.4rem;
 .slider {
   position: relative;
   overflow: hidden;
-  @include size(100%, calc(100vh - $slide-text-height));
+  @include size(100%, 100vh);
 }
 
 .slide {
