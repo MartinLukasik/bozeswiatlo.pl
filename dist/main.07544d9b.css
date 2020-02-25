@@ -1976,7 +1976,7 @@ footer {
 }
 .canvas-wrapper:before {
   content: "";
-  background: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/cheap_diagonal_fabric.png);
+  background: url(/cheap_diagonal_fabric.5004309b.png);
   background-blend-mode: multiply;
   mix-blend-mode: multiply;
   position: absolute;
