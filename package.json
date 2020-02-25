@@ -12,7 +12,8 @@
     "sass": "^1.25.0"
   },
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "lodash.debounce": "^4.0.8"
   },
   "scripts": {
     "dev": "parcel index.html --no-hmr",

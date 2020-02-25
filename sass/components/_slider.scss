@@ -1,10 +1,12 @@
 $bg-scaling-duration: 10s;
 $slide-text-height: 7.4rem;
 
+// Fixing vieports units on mobile bug
 .slider {
   position: relative;
   overflow: hidden;
-  @include size(100%, 100vh);
+  height: 100vh; // Fallback
+  @include size(100%, calc(var(--vh) * 100));
 }
 
 .slide {
