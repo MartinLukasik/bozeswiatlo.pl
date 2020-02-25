@@ -9,15 +9,15 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   transition-duration: 0.3s;
 }
-.icon-pop i {
+.icon-pop .svg-icon {
   transform: translateZ(0);
   transition-duration: 0.3s;
   transition-property: transform;
   transition-timing-function: ease-out;
 }
-.icon-pop:hover i,
-.icon-pop:focus i,
-.icon-pop:active i {
+.icon-pop:hover .svg-icon,
+.icon-pop:focus .svg-icon,
+.icon-pop:active .svg-icon {
   animation-name: icon-pop;
   animation-duration: 0.3s;
   animation-timing-function: linear;

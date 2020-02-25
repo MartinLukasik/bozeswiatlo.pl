@@ -80,7 +80,9 @@ $slide-text-height: 7.4rem;
   cursor: pointer;
   &:hover {
     background-color: #fff;
-    color: $main-font-color;
+    .svg {
+      filter: invert(1);
+    }
   }
   i {
     color: inherit;
