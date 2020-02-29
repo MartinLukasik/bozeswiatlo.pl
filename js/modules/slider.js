@@ -2,7 +2,6 @@ const INTERVAL = 9000;
 
 const Slider = interval => {
   const slides = document.querySelectorAll('.slide');
-  let intervalID = setInterval(nextSlide, interval);
 
   document.getElementById('next').addEventListener('click', () => {
     nextSlide();
@@ -38,6 +37,8 @@ const Slider = interval => {
     }
     setTimeout(() => current.classList.remove('current'));
   };
+
+  let intervalID = setInterval(nextSlide, interval);
 };
 
 Slider(INTERVAL);

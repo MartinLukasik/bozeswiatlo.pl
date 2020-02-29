@@ -1,13 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400,400i&display=swap');
-
 html {
   font-family: $main-font;
   color: $main-font-color;
-}
-
-i {
-  color: $primary-color;
 }
 
 .p {
@@ -31,11 +24,11 @@ i {
 .section-title {
   font-size: 2.2rem;
   font-weight: normal;
+  margin-bottom: 0.5rem;
 }
 
 .article-title {
   font-size: 2.2rem;
   font-weight: normal;
-  margin-bottom: 1.1rem;
-  text-align: center;
+  margin-bottom: 0.8rem;
 }

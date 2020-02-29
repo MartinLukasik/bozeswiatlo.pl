@@ -8,10 +8,20 @@ main {
 }
 
 .svg,
-.svg-icon {
+.svg-icon,
+.svg-left,
+.svg-right {
   vertical-align: middle;
   display: inline;
   text-align: center;
+}
+
+.svg-left {
+  margin-right: 0.3rem;
+}
+
+.svg-right {
+  margin-left: 0.3rem;
 }
 
 .svg-icon {

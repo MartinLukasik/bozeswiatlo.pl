@@ -38,9 +38,16 @@ footer {
 }
 
 .copyright {
-  color: #fff;
+  color: #ccc;
   background-color: $footer-background-dark-color;
   text-align: center;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  a {
+    transition: 0s;
+  }
+  a:hover {
+    color: #fff;
+    text-decoration: underline;
+  }
 }

@@ -1,12 +1,25 @@
-.gallery {
-  cursor: url(/img/search.svg), auto;
-  div {
-    overflow: hidden;
+#mp-gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#mp-gallery > * {
+  flex: 1 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 }
 
-.gallery-img {
-  height: 270px;
-  background-size: cover;
-  background-position: center center;
+@media screen and (min-width: 600px) {
+  #mp-gallery > * {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #mp-gallery > * {
+    flex-basis: 25%;
+  }
 }

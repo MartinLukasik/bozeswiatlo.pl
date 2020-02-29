@@ -9,15 +9,19 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   transition-duration: 0.3s;
 }
-.icon-pop .svg-icon {
+.icon-pop .svg-left,
+.icon-pop .svg-right {
   transform: translateZ(0);
   transition-duration: 0.3s;
   transition-property: transform;
   transition-timing-function: ease-out;
 }
-.icon-pop:hover .svg-icon,
-.icon-pop:focus .svg-icon,
-.icon-pop:active .svg-icon {
+.icon-pop:hover .svg-left,
+.icon-pop:focus .svg-left,
+.icon-pop:active .svg-left,
+.icon-pop:hover .svg-right,
+.icon-pop:focus .svg-right,
+.icon-pop:active .svg-right {
   animation-name: icon-pop;
   animation-duration: 0.3s;
   animation-timing-function: linear;
