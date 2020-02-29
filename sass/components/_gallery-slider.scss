@@ -9,7 +9,7 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
 
 .gallery-slides {
   position: relative;
-  @include center-margin(80%, 90%);
+  @include center-margin(90%, 90%);
 }
 
 .gallery-slide {
@@ -63,20 +63,23 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
   display: block;
   top: 50%;
   transform: translateY(-50%);
-  padding: 20px 15px;
+  padding: 15px 10px;
   border: 2px solid $primary-color;
   margin-left: -2px;
   background-color: transparent;
   outline: none;
   cursor: pointer;
+  path {
+    fill: $primary-color;
+  }
 }
 
 .slider-left {
-  right: 90%;
+  right: 95%;
 }
 
 .slider-right {
-  left: 90%;
+  left: 95%;
 }
 
 .bullet-container {
@@ -110,6 +113,6 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
 
 @media screen and (min-width: $md-viewport) {
   .gallery-slider {
-    @include size(45vw, 500px);
+    @include size(40vw, 550px);
   }
 }

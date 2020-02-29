@@ -1,5 +1,3 @@
-const pageHeader = document.querySelector('.page-header');
-
 if (window.scrollY) {
   pageHeader.classList.add('sticky');
 }

@@ -1,52 +1,43 @@
-const slides = document.querySelectorAll('.slide');
-const next = document.querySelector('#next');
-const prev = document.querySelector('#prev');
+const INTERVAL = 9000;
 
-const intervalTime = 9000;
-let slideInterval;
+const Slider = interval => {
+  const slides = document.querySelectorAll('.slide');
+  let intervalID = setInterval(nextSlide, interval);
 
-const nextSlide = () => {
-  const current = document.querySelector('.current');
-  current.firstElementChild.classList.remove('animation-paused');
-  if (current.nextElementSibling) {
-    current.nextElementSibling.classList.add('current');
-  } else {
-    slides[0].classList.add('current');
-  }
-  setTimeout(() => current.classList.remove('current'));
-};
+  document.getElementById('next').addEventListener('click', () => {
+    nextSlide();
+    clearInterval(intervalID);
+    intervalID = setInterval(nextSlide, interval);
+  });
+  document.getElementById('prev').addEventListener('click', () => {
+    prevSlide();
+    clearInterval(intervalID);
+    intervalID = setInterval(nextSlide, interval);
+  });
 
-const prevSlide = () => {
-  const current = document.querySelector('.current');
-  current.classList.remove('animation-paused');
-  if (current.previousElementSibling) {
-    current.previousElementSibling.classList.add('current');
-  } else {
-    slides[slides.length - 1].classList.add('current');
-  }
-  setTimeout(() => current.classList.remove('current'));
-};
+  intervalID = setInterval(nextSlide, interval);
 
-// Button events
-next.addEventListener('click', () => {
-  nextSlide();
-  clearInterval(slideInterval);
-  slideInterval = setInterval(nextSlide, intervalTime);
-});
-prev.addEventListener('click', () => {
-  prevSlide();
-  clearInterval(slideInterval);
-  slideInterval = setInterval(nextSlide, intervalTime);
-});
-
-slideInterval = setInterval(nextSlide, intervalTime);
-
-// Animation stoping on scroll
-window.addEventListener('scroll', () => {
-  const current = document.querySelector('.current');
-  if (window.scrollY) {
-    current.firstElementChild.classList.add('animation-paused');
-  } else {
+  const nextSlide = () => {
+    const current = document.querySelector('.current');
     current.firstElementChild.classList.remove('animation-paused');
-  }
-});
+    if (current.nextElementSibling) {
+      current.nextElementSibling.classList.add('current');
+    } else {
+      slides[0].classList.add('current');
+    }
+    setTimeout(() => current.classList.remove('current'));
+  };
+
+  const prevSlide = () => {
+    const current = document.querySelector('.current');
+    current.classList.remove('animation-paused');
+    if (current.previousElementSibling) {
+      current.previousElementSibling.classList.add('current');
+    } else {
+      slides[slides.length - 1].classList.add('current');
+    }
+    setTimeout(() => current.classList.remove('current'));
+  };
+};
+
+Slider(INTERVAL);

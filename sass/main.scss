@@ -15,8 +15,9 @@
 
 // 5. Components
 @import 'components/button', 'components/slider', 'components/ministry-card',
-  'components/quote', 'components/gallery', 'components/team-card',
-  'components/social-media', 'components/gallery-slider.scss';
+  'components/quote', 'components/main-page-gallery', 'components/team-card',
+  'components/social-media', 'components/gallery-slider.scss',
+  'components/gallery';
 
 // 6. Page-specific styles
 @import 'pages/home', 'pages/about', 'pages/contact';
