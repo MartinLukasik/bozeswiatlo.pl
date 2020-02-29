@@ -1,10 +1,6 @@
 import debounce from 'lodash.debounce';
-import Slider from './slider';
 
 const pageHeader = document.querySelector('.page-header');
-const INTERVAL = 9000;
-
-new Slider(INTERVAL);
 
 function handleScroll() {
   if (window.scrollY) {
@@ -12,7 +8,6 @@ function handleScroll() {
   } else {
     pageHeader.classList.remove('sticky');
   }
-  console.log('called');
   const current = document.querySelector('.current');
   if (window.scrollY) {
     current.firstElementChild.classList.add('animation-paused');

@@ -1,40 +1,43 @@
-export default class Slider {
-  constructor(interval) {
-    this.slides = document.querySelectorAll('.slide');
-    this.intervalID = setInterval(this.nextSlide, interval);
+const INTERVAL = 9000;
 
-    document.getElementById('next').addEventListener('click', () => {
-      this.nextSlide();
-      clearInterval(this.intervalID);
-      this.intervalID = setInterval(this.nextSlide, interval);
-    });
-    document.getElementById('prev').addEventListener('click', () => {
-      this.prevSlide();
-      clearInterval(this.intervalID);
-      this.intervalID = setInterval(this.nextSlide, interval);
-    });
-    this.intervalID = setInterval(this.nextSlide, interval);
-  }
+const Slider = interval => {
+  const slides = document.querySelectorAll('.slide');
+  let intervalID = setInterval(nextSlide, interval);
 
-  nextSlide() {
+  document.getElementById('next').addEventListener('click', () => {
+    nextSlide();
+    clearInterval(intervalID);
+    intervalID = setInterval(nextSlide, interval);
+  });
+  document.getElementById('prev').addEventListener('click', () => {
+    prevSlide();
+    clearInterval(intervalID);
+    intervalID = setInterval(nextSlide, interval);
+  });
+
+  intervalID = setInterval(nextSlide, interval);
+
+  const nextSlide = () => {
     const current = document.querySelector('.current');
     current.firstElementChild.classList.remove('animation-paused');
     if (current.nextElementSibling) {
       current.nextElementSibling.classList.add('current');
     } else {
-      this.slides[0].classList.add('current');
+      slides[0].classList.add('current');
     }
     setTimeout(() => current.classList.remove('current'));
-  }
+  };
 
-  prevSlide() {
+  const prevSlide = () => {
     const current = document.querySelector('.current');
     current.classList.remove('animation-paused');
     if (current.previousElementSibling) {
       current.previousElementSibling.classList.add('current');
     } else {
-      this.slides[this.slides.length - 1].classList.add('current');
+      slides[this.slides.length - 1].classList.add('current');
     }
     setTimeout(() => current.classList.remove('current'));
-  }
-}
+  };
+};
+
+Slider(INTERVAL);
