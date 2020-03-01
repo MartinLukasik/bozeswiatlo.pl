@@ -1,13 +1,3 @@
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * DS202: Simplify dynamic range loops
- * DS205: Consider reworking code to avoid use of IIFEs
- * DS207: Consider shorter variations of null checks
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
-// Source: https://codepen.io/xposedbones/pen/XXpgpj
-// Variables
 import imgSrc from '../../img/canvas-bg.jpg';
 
 const canvas = document.getElementById('canvas');
@@ -18,7 +8,7 @@ const img = new Image();
 const imgInfo = {};
 const imgs = [];
 const grids = [];
-const magnet = 2000;
+const magnet = 2200;
 const mouse = {
   x: 1,
   y: 0,
@@ -37,11 +27,13 @@ const init = function() {
       Math.ceil(window.innerHeight / imgInfo.height);
 
     createGrid();
-    populateCanvas(numberToShow * 4);
+    if (window.matchMedia('(min-width: 500px)').matches) {
+      populateCanvas(numberToShow * 8);
+    }
 
     // Image is ready and we're ready to go
     canvas.classList.add('ready');
-    return render();
+    render();
   };
 
   return (img.src = imgSrc);
@@ -50,17 +42,17 @@ const init = function() {
 let addListeners = function() {
   window.addEventListener('resize', resizeCanvas);
   window.addEventListener('mousemove', updateMouse);
-  return window.addEventListener('touchmove', updateMouse);
+  window.addEventListener('touchmove', updateMouse);
 };
 
 let updateMouse = function(e) {
   mouse.x = e.clientX;
-  return (mouse.y = e.clientY);
+  mouse.y = e.clientY;
 };
 
 let resizeCanvas = function() {
   width = canvas.width = window.innerWidth;
-  return (height = canvas.height = window.innerHeight);
+  height = canvas.height = window.innerHeight;
 };
 
 // Magic
@@ -78,7 +70,7 @@ let populateCanvas = function(nb) {
 };
 
 let createGrid = function() {
-  const imgScale = 0.5;
+  const imgScale = 0.4;
   const grid = {
     row: Math.ceil(window.innerWidth / (imgInfo.width * imgScale)),
     cols: Math.ceil(window.innerHeight / (imgInfo.height * imgScale)),
