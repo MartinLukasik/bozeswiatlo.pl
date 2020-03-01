@@ -516,8 +516,6 @@ window.addEventListener('resize', (0, _lodash.default)(setCssProp, 500, {
 },{"lodash.debounce":"node_modules/lodash.debounce/index.js"}],"js/modules/slider.js":[function(require,module,exports) {
 var INTERVAL = 9000;
 
-function lazyLoad(src) {}
-
 var Slider = function Slider(interval) {
   var slides = document.querySelectorAll('.slide');
   document.getElementById('next').addEventListener('click', function () {
