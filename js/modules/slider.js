@@ -1,7 +1,5 @@
 const INTERVAL = 9000;
 
-function lazyLoad(src) {}
-
 const Slider = interval => {
   const slides = document.querySelectorAll('.slide');
 
@@ -20,6 +18,7 @@ const Slider = interval => {
 
   const nextSlide = () => {
     const current = document.querySelector('.current');
+
     current.firstElementChild.classList.remove('animation-paused');
     if (current.nextElementSibling) {
       current.nextElementSibling.classList.add('current');

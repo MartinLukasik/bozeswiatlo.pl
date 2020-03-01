@@ -28,6 +28,7 @@
 }
 
 .meta {
+  text-align: center;
   font-size: 0.9rem;
   color: #aaa;
   margin-bottom: 0.7rem;
@@ -54,6 +55,9 @@
   .blog-entry {
     flex-direction: row;
     width: 85%;
+  }
+  .meta {
+    text-align: left;
   }
   .text {
     padding-left: 1.6rem;
