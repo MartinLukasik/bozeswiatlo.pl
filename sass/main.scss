@@ -11,13 +11,13 @@
   'base/animations';
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/footer';
+@import 'layout/header', 'layout/responsive-nav', 'layout/footer';
 
 // 5. Components
 @import 'components/button', 'components/slider', 'components/ministry-card',
   'components/quote', 'components/main-page-gallery', 'components/team-card',
   'components/social-media', 'components/gallery-slider.scss',
-  'components/gallery', 'components/blog-entry.scss';
+  'components/gallery', 'components/blog-entry.scss', 'components/ministry';
 
 // 6. Page-specific styles
 @import 'pages/home', 'pages/about', 'pages/contact';

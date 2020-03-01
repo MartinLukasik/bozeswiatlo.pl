@@ -18,6 +18,7 @@ const Slider = interval => {
 
   const nextSlide = () => {
     const current = document.querySelector('.current');
+
     current.firstElementChild.classList.remove('animation-paused');
     if (current.nextElementSibling) {
       current.nextElementSibling.classList.add('current');

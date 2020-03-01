@@ -1,4 +1,4 @@
-$ministry-img-height: 12rem;
+$ministry-thumbnail-height: 12rem;
 
 $border-radius: 3px;
 $timing-1: 0.4s 0.15s;
@@ -12,8 +12,8 @@ $timing-2: 0.5s 0.25s;
   margin: 2rem;
 }
 
-.ministry-img {
-  @include size(auto, $ministry-img-height);
+.ministry-thumbnail {
+  @include size(auto, $ministry-thumbnail-height);
   background-position: center;
   background-size: cover;
   border-radius: $border-radius;
@@ -39,10 +39,6 @@ $timing-2: 0.5s 0.25s;
     text-transform: uppercase;
     font-size: 0.85rem;
     color: $main-font-light-color;
-    i {
-      color: $primary-color;
-      margin-right: 0.5rem;
-    }
   }
   .ministry-time,
   .ministry-location {
@@ -75,7 +71,7 @@ $timing-2: 0.5s 0.25s;
 }
 
 .ministry-card:hover .ministry-info {
-  transform: translateY(-$ministry-img-height);
+  transform: translateY(-$ministry-thumbnail-height);
   .ministry-time,
   .ministry-location,
   .txt,

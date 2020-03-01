@@ -1,0 +1,27 @@
+a[data-aos] {
+  display: block;
+}
+
+.ministry {
+  margin-bottom: 7rem;
+}
+
+.ministry-img {
+  @include center-margin(100%, auto);
+}
+
+.ministry-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: $sm-viewport) {
+  .ministry {
+    @include center-margin(80%);
+  }
+  .ministry-img {
+    width: 85%;
+  }
+}
