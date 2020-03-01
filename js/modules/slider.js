@@ -1,5 +1,7 @@
 const INTERVAL = 9000;
 
+function lazyLoad(src) {}
+
 const Slider = interval => {
   const slides = document.querySelectorAll('.slide');
 
