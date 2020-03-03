@@ -13,6 +13,13 @@
     <!-- All custom stylesheet below libraries -->
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <style>
+      #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+    </style>
   </head>
 
   <body>
@@ -64,7 +71,9 @@
     <main>
       <section style="margin-top: 170px" class="contact" data-aos="zoom-in">
         <div class="container">
-          <h4 class="contact-title">Контактная информация</h4>
+          <div class="section-title-container">
+            <h2 class="section-title">Контактная информация</h2>
+          </div>
           <div class="row">
             <div class="col-xs-12 col-md-4 contact-entry">
               <p>Адрес: <span>Krochmalna 24, Lublin</span></p>
@@ -78,15 +87,21 @@
           </div>
         </div>
       </section>
+      <section style="margin-top: 4rem;">
+        <div class="section-title-container">
+          <h2 class="section-title">Как к нам добратся</h2>
+        </div>
+        <div id="map"></div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer>
       <div class="main-footer row center-xs">
         <div class="footer-logo col-xs-12 col-sm-6 col-lg-5">
-          <div>
+          <a href="index.html">
             <img src="img/logo/logo-white.png" alt="" />
-          </div>
+          </a>
           <p class="align-center">
             Наша цель: Достигать. Учить. Вдохновлять.
           </p>
@@ -173,6 +188,19 @@
       </div>
     </footer>
 
-    <script src="js/contact.js"></script>
+    <script src="js/other-pages.js"></script>
+    <script>
+      function initMap() {
+        const map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: { lat: -25.344, lng: 131.036 },
+        });
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRGyw4KzC6pS8W-fhgwlleSd8GWuMn-FE&callback=initMap"
+    ></script>
   </body>
 </html>

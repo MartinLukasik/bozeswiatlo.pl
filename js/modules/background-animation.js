@@ -8,7 +8,7 @@ const img = new Image();
 const imgInfo = {};
 const imgs = [];
 const grids = [];
-const magnet = 2200;
+const magnet = 2050;
 const mouse = {
   x: 1,
   y: 0,
@@ -28,7 +28,7 @@ const init = function() {
 
     createGrid();
     if (window.matchMedia('(min-width: 500px)').matches) {
-      populateCanvas(numberToShow * 8);
+      populateCanvas(numberToShow * 15);
     }
 
     // Image is ready and we're ready to go
@@ -112,14 +112,13 @@ let gridItem = function(x, y, w, h) {
 };
 
 let Photo = function() {
-  const seed = Math.random() * (2.5 - 0.7) + 0.7;
+  const seed = Math.random() * 2.5 + 1;
   const w = imgInfo.width / seed;
   const h = imgInfo.height / seed;
   let x = window.innerWidth * Math.random();
   const finalX = x;
   let y = window.innerHeight * Math.random();
   const finalY = y;
-  // console.log(`INIT Y :: ${finalY} || INIT X :: ${finalX}`);
   const r = Math.random() * (180 - -180) + -180;
 
   let forceX = 0;
@@ -185,7 +184,6 @@ let render = function() {
   return requestAnimationFrame(render);
 };
 
-init();
 function __range__(left, right, inclusive) {
   let range = [];
   let ascending = left < right;
@@ -195,3 +193,5 @@ function __range__(left, right, inclusive) {
   }
   return range;
 }
+
+init();

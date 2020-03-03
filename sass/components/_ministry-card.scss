@@ -1,87 +1,88 @@
-$ministry-thumbnail-height: 12rem;
+$m-card-thumbnail-height: 12rem;
 
 $border-radius: 3px;
 $timing-1: 0.4s 0.15s;
 $timing-2: 0.5s 0.25s;
 
-.ministry-card {
-  @include size($ministry-card-width, $ministry-card-height);
+.m-card-card {
+  @include size($m-card-card-width, $m-card-card-height);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
   overflow: hidden;
   margin: 2rem;
 }
 
-.ministry-thumbnail {
-  @include size(auto, $ministry-thumbnail-height);
+.m-card-thumbnail {
+  @include size(auto, $m-card-thumbnail-height);
   background-position: center;
   background-size: cover;
   border-radius: $border-radius;
 }
-.ministry-info {
-  @include size(auto, $ministry-card-height);
+.m-card-info {
+  @include size(auto, $m-card-card-height);
   position: relative;
   padding: 14px 24px;
   transition: all $timing-1;
   background-color: #fff;
-  .ministry-title {
-    position: relative;
-    margin: 8px 0;
-    color: $main-font-color;
-    font-size: 1rem;
-    text-transform: uppercase;
-    text-shadow: 0 0 0px lighten($main-font-color, 20);
-  }
-  .ministry-date,
-  .ministry-time,
-  .ministry-location {
-    margin-bottom: 0.4rem;
-    text-transform: uppercase;
-    font-size: 0.85rem;
-    color: $main-font-light-color;
-  }
-  .ministry-time,
-  .ministry-location {
-    margin-right: 0.4rem;
-    display: inline-block;
-    opacity: 0;
-    transition: $timing-2;
-  }
-  .txt {
-    padding-top: 0.4rem;
-    border-top: 1px solid rgba($main-font-light-color, 0.4);
-    font-size: 0.95rem;
-    opacity: 0;
-    transition: $timing-2;
-  }
-  .ministry-link {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 1.3rem 1.5rem;
-    letter-spacing: 1px;
-    font-weight: bold;
-    color: $primary-color;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    opacity: 0;
-    transition: $timing-2;
-    cursor: pointer;
-  }
 }
 
-.ministry-card:hover .ministry-info {
-  transform: translateY(-$ministry-thumbnail-height);
-  .ministry-time,
-  .ministry-location,
+.m-card-title {
+  position: relative;
+  margin: 8px 0;
+  color: $main-font-color;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 0px lighten($main-font-color, 20);
+}
+.m-card-date,
+.m-card-time,
+.m-card-location {
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  color: $main-font-light-color;
+}
+.m-card-time,
+.m-card-location {
+  margin-right: 0.4rem;
+  display: inline-block;
+  opacity: 0;
+  transition: $timing-2;
+}
+.txt {
+  padding-top: 0.4rem;
+  border-top: 1px solid rgba($main-font-light-color, 0.4);
+  font-size: 0.95rem;
+  opacity: 0;
+  transition: $timing-2;
+}
+.m-card-link {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1.3rem 1.5rem;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: $primary-color;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: $timing-2;
+  cursor: pointer;
+}
+
+.m-card-card:hover .m-card-info {
+  transform: translateY(-$m-card-thumbnail-height);
+  .m-card-time,
+  .m-card-location,
   .txt,
-  .ministry-link {
+  .m-card-link {
     opacity: 1;
   }
 }
 
 @media screen and (max-width: $sm-viewport) {
-  .ministry-card[data-aos-delay] {
+  .m-card-card[data-aos-delay] {
     transition-delay: 0s !important;
   }
 }
