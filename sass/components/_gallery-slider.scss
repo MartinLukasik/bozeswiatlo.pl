@@ -4,7 +4,7 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
 
 .gallery-slider {
   position: relative;
-  @include center-margin(90vw, 330px);
+  @include center-margin(95vw, 330px);
 }
 
 .gallery-slides {
@@ -75,11 +75,11 @@ $mode: cubic-bezier(0.17, 0.67, 0.55, 1.43);
 }
 
 .slider-left {
-  right: 95%;
+  right: 0;
 }
 
 .slider-right {
-  left: 95%;
+  left: 0;
 }
 
 .bullet-container {
