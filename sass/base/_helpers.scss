@@ -27,3 +27,24 @@
 .animation-paused {
   animation-play-state: paused !important;
 }
+
+.img-float-left,
+.img-float-right {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: $sm-viewport) {
+  .img-float-left {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .img-float-right {
+    float: right;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}

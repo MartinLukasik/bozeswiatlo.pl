@@ -2,12 +2,25 @@
   margin-top: 120px;
 }
 
+.article-img {
+  @include center-margin(88%, auto);
+}
+
 .team {
   margin-top: 4rem;
 }
 
 .about-us-article {
-  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-us-article {
+  div.container {
+    color: #666;
+    font-size: 1.1rem;
+    text-align: justify;
+  }
 }
 
 .donation {
