@@ -657,16 +657,6 @@ var _canvasBg = _interopRequireDefault(require("../../img/canvas-bg.jpg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/*
- * decaffeinate suggestions:
- * DS102: Remove unnecessary code created because of implicit returns
- * DS202: Simplify dynamic range loops
- * DS205: Consider reworking code to avoid use of IIFEs
- * DS207: Consider shorter variations of null checks
- * Full docs: https://github.com/decaffeinate/decaffeinate/blob/master/docs/suggestions.md
- */
-// Source: https://codepen.io/xposedbones/pen/XXpgpj
-// Variables
 var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
 var width = canvas.width = window.innerWidth;
@@ -675,7 +665,7 @@ var img = new Image();
 var imgInfo = {};
 var imgs = [];
 var grids = [];
-var magnet = 2000;
+var magnet = 2050;
 var mouse = {
   x: 1,
   y: 0
@@ -690,10 +680,14 @@ var init = function init() {
     imgInfo.height = e.path ? e.path[0].height : e.target.height;
     var numberToShow = Math.ceil(window.innerWidth / imgInfo.width) * Math.ceil(window.innerHeight / imgInfo.height);
     createGrid();
-    populateCanvas(numberToShow * 4); // Image is ready and we're ready to go
+
+    if (window.matchMedia('(min-width: 500px)').matches) {
+      populateCanvas(numberToShow * 15);
+    } // Image is ready and we're ready to go
+
 
     canvas.classList.add('ready');
-    return render();
+    render();
   };
 
   return img.src = _canvasBg.default;
@@ -702,17 +696,17 @@ var init = function init() {
 var addListeners = function addListeners() {
   window.addEventListener('resize', resizeCanvas);
   window.addEventListener('mousemove', updateMouse);
-  return window.addEventListener('touchmove', updateMouse);
+  window.addEventListener('touchmove', updateMouse);
 };
 
 var updateMouse = function updateMouse(e) {
   mouse.x = e.clientX;
-  return mouse.y = e.clientY;
+  mouse.y = e.clientY;
 };
 
 var resizeCanvas = function resizeCanvas() {
   width = canvas.width = window.innerWidth;
-  return height = canvas.height = window.innerHeight;
+  height = canvas.height = window.innerHeight;
 }; // Magic
 
 
@@ -732,7 +726,7 @@ var populateCanvas = function populateCanvas(nb) {
 };
 
 var createGrid = function createGrid() {
-  var imgScale = 0.5;
+  var imgScale = 0.4;
   var grid = {
     row: Math.ceil(window.innerWidth / (imgInfo.width * imgScale)),
     cols: Math.ceil(window.innerHeight / (imgInfo.height * imgScale)),
@@ -770,14 +764,13 @@ var gridItem = function gridItem(x, y, w, h) {
 };
 
 var Photo = function Photo() {
-  var seed = Math.random() * (2.5 - 0.7) + 0.7;
+  var seed = Math.random() * 2.5 + 1;
   var w = imgInfo.width / seed;
   var h = imgInfo.height / seed;
   var x = window.innerWidth * Math.random();
   var finalX = x;
   var y = window.innerHeight * Math.random();
-  var finalY = y; // console.log(`INIT Y :: ${finalY} || INIT X :: ${finalX}`);
-
+  var finalY = y;
   var r = Math.random() * (180 - -180) + -180;
   var forceX = 0;
   var forceY = 0;
@@ -831,8 +824,6 @@ var render = function render() {
   return requestAnimationFrame(render);
 };
 
-init();
-
 function __range__(left, right, inclusive) {
   var range = [];
   var ascending = left < right;
@@ -844,6 +835,8 @@ function __range__(left, right, inclusive) {
 
   return range;
 }
+
+init();
 },{"../../img/canvas-bg.jpg":"img/canvas-bg.jpg"}],"js/main-page.js":[function(require,module,exports) {
 "use strict";
 

@@ -1063,6 +1063,11 @@ html {
   margin-bottom: 2.5rem;
 }
 
+.section-subtitle {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
 .section-title {
   font-size: 2.2rem;
   font-weight: normal;
@@ -1107,6 +1112,26 @@ html {
   animation-play-state: paused !important;
 }
 
+.img-float-left,
+.img-float-right {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 48em) {
+  .img-float-left {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .img-float-right {
+    float: right;
+    margin-left: 2rem;
+    margin-bottom: 0.5rem;
+  }
+}
 /* Icon Pop */
 @keyframes icon-pop {
   50% {
@@ -2105,12 +2130,26 @@ section p {
   margin-top: 120px;
 }
 
+.article-img {
+  width: 88%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .team {
   margin-top: 4rem;
 }
 
 .about-us-article {
-  margin-bottom: 2.5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.about-us-article div.container {
+  color: #666;
+  font-size: 1.1rem;
+  text-align: justify;
 }
 
 .donation {
