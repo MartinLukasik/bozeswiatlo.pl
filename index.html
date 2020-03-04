@@ -171,7 +171,7 @@
           </p>
         </div>
         <div class="row center-xs cols-fixed no-gutters">
-          <div class="m-card-card col-xs" data-aos="zoom-in">
+          <div class="m-card col-xs" data-aos="zoom-in">
             <div
               class="m-card-thumbnail"
               style="background-image: url(/img/ministries/1.jpg)"
@@ -206,18 +206,18 @@
                 />Krochmalna 24
               </h3>
               <p class="txt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam, quos?
+                Воскресное собрание проходить согласно протестантской традиции.
+                Начинаем служение с пару песен прославления, где мы можем
+                славить и благодарить нашего Творца. После чего следует
+                словоучение основанное на священном писании. А после окончания
+                служения мы обычно имеем возможность пообщаться за чашкой чая с
+                вкуснейшеми бутербродами и печеньками
               </p>
               <a class="m-card-link" href="ministries.html#1">Детали</a>
             </div>
           </div>
 
-          <div
-            class="m-card-card col-xs"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
+          <div class="m-card col-xs" data-aos="zoom-in" data-aos-delay="200">
             <div
               class="m-card-thumbnail"
               style="background-image: url(/img/ministries/2.jpg)"
@@ -252,18 +252,15 @@
                 />Krochmalna 24
               </h3>
               <p class="txt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam, quos?
+                Время общих молитв мы посвящаем на совместную молитву Господу,
+                мы ведём тетрадь нужд куда мы записуем наши просьбы и
+                благодарения Богу.
               </p>
               <a class="m-card-link" href="ministries.html#2">Детали</a>
             </div>
           </div>
 
-          <div
-            class="m-card-card col-xs"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
+          <div class="m-card col-xs" data-aos="zoom-in" data-aos-delay="400">
             <div
               class="m-card-thumbnail"
               style="background-image: url(/img/ministries/3.jpg)"
@@ -298,14 +295,16 @@
                 />IKEA
               </h3>
               <p class="txt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam, quos?
+                Домашние группы предназначены для просто общения и разбора
+                конкретных глав Библии, на них мы делимся как у нас прошла
+                неделя и также пытаемся розяснить неясные отрывки из
+                прочитанного в священном писании.
               </p>
               <a class="m-card-link" href="ministries.html#3">Детали</a>
             </div>
           </div>
 
-          <div class="m-card-card col-xs" data-aos="zoom-in">
+          <div class="m-card col-xs" data-aos="zoom-in">
             <div
               class="m-card-thumbnail"
               style="background-image: url(/img/ministries/4.jpg)"
@@ -340,18 +339,13 @@
                 />Krochmalna 24
               </h3>
               <p class="txt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam, quos?
+                Бог один знает чем они там занимаются
               </p>
               <a class="m-card-link" href="ministries.html#4">Детали</a>
             </div>
           </div>
 
-          <div
-            class="m-card-card col-xs"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
+          <div class="m-card col-xs" data-aos="zoom-in" data-aos-delay="200">
             <div
               class="m-card-thumbnail"
               style="background-image: url(/img/ministries/5.jpg)"
@@ -386,18 +380,16 @@
                 />Krochmalna 24
               </h3>
               <p class="txt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam, quos?
+                На молодёжках мы проводим дискуссии на различные
+                интеллектуальные и не очень темы ,играем интересные командные
+                либо настольные игры, ну и конечно все это время нас
+                сопровождает вкуснейшее бесплатное угощение
               </p>
               <a class="m-card-link" href="ministries.html#5">Детали</a>
             </div>
           </div>
 
-          <div
-            class="m-card-card col-xs"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
+          <div class="m-card col-xs" data-aos="zoom-in" data-aos-delay="400">
             <div
               class="m-card-thumbnail"
               style="background-image: url(/img/ministries/6.jpg)"
@@ -432,8 +424,11 @@
                 />Plac Litewski
               </h3>
               <p class="txt">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Aliquam, quos?
+                Пятничные евангелизации это особо важные события, мы собираемся
+                в центре города (обычно на литовской площади в Люблине) и просто
+                поем под гитару христианские песни, когда кто-то из прохожих
+                интересуется кто мы такие и что здесь делаем, мы расказуем ему
+                про нашу церковь и с радостью отвечаем на все вопросы.
               </p>
               <a class="m-card-link" href="ministries.html#6">Детали</a>
             </div>
@@ -584,6 +579,10 @@
     <script src="js/vendors/lightgallery.min.js"></script>
     <script>
       lightGallery(document.getElementById('mp-gallery'), {});
+      const cards = document.querySelectorAll('.m-card');
+      cards.forEach(card =>
+        card.addEventListener('mouseout', () => (card.scrollTop = 0))
+      );
     </script>
   </body>
 </html>

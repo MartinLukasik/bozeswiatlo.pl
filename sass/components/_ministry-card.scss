@@ -1,11 +1,13 @@
-$m-card-thumbnail-height: 12rem;
-
 $border-radius: 3px;
 $timing-1: 0.4s 0.15s;
 $timing-2: 0.5s 0.25s;
 
-.m-card-card {
-  @include size($m-card-card-width, $m-card-card-height);
+$m-card-width: 18rem;
+$m-card-height: 20rem;
+$m-card-thumbnail-height: 14rem;
+
+.m-card {
+  @include size($m-card-width, $m-card-height);
   border-radius: $border-radius;
   box-shadow: $box-shadow;
   overflow: hidden;
@@ -19,7 +21,7 @@ $timing-2: 0.5s 0.25s;
   border-radius: $border-radius;
 }
 .m-card-info {
-  @include size(auto, $m-card-card-height);
+  @include size(auto, $m-card-height);
   position: relative;
   padding: 14px 24px;
   transition: all $timing-1;
@@ -71,7 +73,7 @@ $timing-2: 0.5s 0.25s;
   cursor: pointer;
 }
 
-.m-card-card:hover .m-card-info {
+.m-card:hover .m-card-info {
   transform: translateY(-$m-card-thumbnail-height);
   .m-card-time,
   .m-card-location,
@@ -82,7 +84,7 @@ $timing-2: 0.5s 0.25s;
 }
 
 @media screen and (max-width: $sm-viewport) {
-  .m-card-card[data-aos-delay] {
+  .m-card[data-aos-delay] {
     transition-delay: 0s !important;
   }
 }
