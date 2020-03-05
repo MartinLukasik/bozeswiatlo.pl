@@ -2,7 +2,7 @@ $border-radius: 3px;
 $timing-1: 0.4s 0.15s;
 $timing-2: 0.5s 0.25s;
 
-$m-card-width: 18rem;
+$m-card-width: 20rem;
 $m-card-height: 20rem;
 $m-card-thumbnail-height: 14rem;
 
@@ -12,18 +12,35 @@ $m-card-thumbnail-height: 14rem;
   box-shadow: $box-shadow;
   overflow: hidden;
   margin: 2rem;
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    background-color: #f5f5f5;
+  }
+  &::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: $primary-color;
+  }
 }
 
 .m-card-thumbnail {
-  @include size(auto, $m-card-thumbnail-height);
+  @include size($m-card-width, $m-card-thumbnail-height);
   background-position: center;
   background-size: cover;
   border-radius: $border-radius;
 }
+
 .m-card-info {
   @include size(auto, $m-card-height);
   position: relative;
-  padding: 14px 24px;
+  padding: 14px 1rem;
   transition: all $timing-1;
   background-color: #fff;
 }
@@ -52,17 +69,16 @@ $m-card-thumbnail-height: 14rem;
   transition: $timing-2;
 }
 .txt {
+  text-align: justify;
   padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
   border-top: 1px solid rgba($main-font-light-color, 0.4);
   font-size: 0.95rem;
   opacity: 0;
   transition: $timing-2;
 }
+
 .m-card-link {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  padding: 1.3rem 1.5rem;
   letter-spacing: 1px;
   font-weight: bold;
   color: $primary-color;

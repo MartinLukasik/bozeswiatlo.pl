@@ -32,6 +32,11 @@
           </li>
           <li>
             <a class="main-nav__link" href="about.html">О нас</a>
+            <ul class="main-nav__submenu">
+              <li class="main-nav__link"><a href="">first</a></li>
+              <li class="main-nav__link"><a href="">second</a></li>
+              <li class="main-nav__link"><a href="">last</a></li>
+            </ul>
           </li>
           <li>
             <a class="main-nav__link" href="gallery.html">Галерея</a>
@@ -253,7 +258,7 @@
               </h3>
               <p class="txt">
                 Время общих молитв мы посвящаем на совместную молитву Господу,
-                мы ведём тетрадь нужд куда мы записуем наши просьбы и
+                также мы ведём тетрадь нужд куда мы записуем наши просьбы и
                 благодарения Богу.
               </p>
               <a class="m-card-link" href="ministries.html#2">Детали</a>
@@ -579,10 +584,6 @@
     <script src="js/vendors/lightgallery.min.js"></script>
     <script>
       lightGallery(document.getElementById('mp-gallery'), {});
-      const cards = document.querySelectorAll('.m-card');
-      cards.forEach(card =>
-        card.addEventListener('mouseout', () => (card.scrollTop = 0))
-      );
     </script>
   </body>
 </html>

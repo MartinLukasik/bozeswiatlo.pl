@@ -48,3 +48,8 @@
     margin-bottom: 0.5rem;
   }
 }
+
+.scroll-y {
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
+}
