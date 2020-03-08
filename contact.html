@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Boże światło | kościół chrześciański</title>
+    <title>Контакты, как найти нас | Христианская церковь Boże światło</title>
     <!-- Google fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400i|Roboto:700&display=swap"
@@ -13,13 +13,6 @@
     <!-- All custom stylesheet below libraries -->
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <style>
-      #map {
-        width: 100%;
-        height: 400px;
-        background-color: grey;
-      }
-    </style>
   </head>
 
   <body>
@@ -48,7 +41,7 @@
           </li>
           <li>
             <a class="main-nav__link main-nav__link--active" href="contact.html"
-              >Контакт</a
+              >Контакты</a
             >
           </li>
         </ul>
@@ -64,7 +57,7 @@
         <a href="gallery.html">Галерея</a>
         <a href="ministries.html">Служения</a>
         <a href="testimonials.html">Свидетельства</a>
-        <a href="contact.html">Контакт</a>
+        <a href="contact.html">Контакты</a>
       </div>
     </header>
 
@@ -72,7 +65,7 @@
       <section style="margin-top: 170px" class="contact" data-aos="zoom-in">
         <div class="container">
           <div class="section-title-container">
-            <h2 class="section-title">Контактная информация</h2>
+            <h2 class="section-title">Контактыная информация</h2>
           </div>
           <div class="row">
             <div class="col-xs-12 col-md-4 contact-entry">
@@ -86,12 +79,6 @@
             </div>
           </div>
         </div>
-      </section>
-      <section style="margin-top: 4rem;">
-        <div class="section-title-container">
-          <h2 class="section-title">Как к нам добратся</h2>
-        </div>
-        <div id="map"></div>
       </section>
     </main>
 
@@ -189,18 +176,5 @@
     </footer>
 
     <script defer src="js/other-pages.js"></script>
-    <script>
-      function initMap() {
-        const map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 4,
-          center: { lat: -25.344, lng: 131.036 },
-        });
-      }
-    </script>
-    <script
-      async
-      defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRGyw4KzC6pS8W-fhgwlleSd8GWuMn-FE&callback=initMap"
-    ></script>
   </body>
 </html>
