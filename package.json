@@ -22,7 +22,7 @@
   "scripts": {
     "dev": "parcel index.html --no-hmr",
     "devopen": "parcel index.html --no-hmr --open",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --out-dir ./build",
     "deploy-build": "parcel build index.html --out-dir ~/Desktop/bozeswiatlo/public"
   }
 }
