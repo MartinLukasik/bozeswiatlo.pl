@@ -1,11 +1,17 @@
-import verses from './bible-verses.json';
+function changeVerse() {
+  const quote = document.querySelector('.quote-quote');
+  const quoteSrc = document.querySelector('.quote-src');
+  const verse = JSON.parse(this.responseText);
 
-const quote = document.querySelector('.quote-quote');
-const quoteSrc = document.querySelector('.quote-src');
-
-function changeVerse(verse) {
   quote.textContent = verse.quote;
   quoteSrc.textContent = verse.src;
 }
 
-changeVerse(verses[Math.floor(Math.random() * verses.length)]);
+function fetchVerse(callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.addEventListener('load', callback);
+  xhr.open('GET', 'https://bozeswiatlo.herokuapp.com/api/verses/random');
+  xhr.send();
+}
+
+fetchVerse(changeVerse);

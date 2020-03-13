@@ -276,8 +276,8 @@
          */
         preload: 1,
         showAfterLoad: true,
-        selector: '',
-        selectWithin: '',
+       selector: '',
+       selectWithin: '',
         nextHtml: '',
         prevHtml: '',
 
@@ -406,7 +406,7 @@
                 /*jshint loopfunc: true */
                 (function (index) {
 
-                    // Using different namespace for click because click event should not unbind if selector is same object('this')
+                    // Using different namespace for click because click event should not unbind ifselector is same object('this')
                     _lgUtils2.default.on(_this.items[index], 'click.lgcustom', function (e) {
 
                         e.preventDefault();
