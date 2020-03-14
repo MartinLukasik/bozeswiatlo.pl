@@ -63,3 +63,22 @@
     opacity: 1;
   }
 }
+
+@keyframes swirl-in {
+  0% {
+    transform: rotate(-540deg) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0) scale(1);
+    opacity: 1;
+  }
+}
+
+[data-aos='swirl-in'] {
+  opacity: 0;
+}
+
+[data-aos='swirl-in'].aos-animate {
+  animation: swirl-in 0.6s ease-out both;
+}
