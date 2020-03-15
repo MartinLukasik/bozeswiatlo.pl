@@ -105,7 +105,7 @@ class GalleryPager {
     filterEl.addEventListener('change', e => {
       const value = e.target.value;
 
-      if (value === '*') {
+      if (!value) {
         this.filteredPhotoSrcs = this.photoSrcs;
         this.photos = this.filteredPhotoSrcs.slice(0, imagesPerPage);
       } else {
@@ -158,7 +158,7 @@ class GalleryPager {
         a.href = src;
         img.src = src;
         img.height = 300;
-        img.alt = 'gallery-photo';
+        img.alt = 'gallery photo';
         a.appendChild(img);
         gallery.appendChild(a);
       }

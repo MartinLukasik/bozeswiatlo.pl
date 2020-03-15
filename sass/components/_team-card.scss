@@ -1,7 +1,7 @@
 $team-card-bg-color: #efefef;
 
 .team-card {
-  width: 16rem;
+  width: 13.5rem;
   background-color: $team-card-bg-color;
   display: flex;
   flex-direction: column;
@@ -14,8 +14,6 @@ $team-card-bg-color: #efefef;
   h4 {
     font-size: 1.3rem;
     color: #333333;
-    margin-top: 0.7rem;
-    margin-bottom: 0.7rem;
   }
 }
 
@@ -24,24 +22,24 @@ $team-card-bg-color: #efefef;
 }
 
 .card-img {
-  height: 11rem;
+  height: 9rem;
   object-fit: cover;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
 }
 
 .profile-img {
-  width: 8rem;
-  height: 8rem;
+  width: 9rem;
+  height: 9rem;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: -7rem;
+  margin-top: -7.2rem;
   z-index: 2;
   border: 0.35rem solid $team-card-bg-color;
 }
 
 .job-title {
   color: #777777;
-  font-weight: 300;
+  font-size: 1.05rem;
 }
 
 @media screen and (max-width: $sm-viewport) {

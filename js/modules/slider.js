@@ -40,6 +40,13 @@ const Slider = interval => {
   };
 
   let intervalID = setInterval(nextSlide, interval);
+  document.addEventListener('keydown', e => {
+    if (e.keyCode == '37') {
+      prevSlide();
+    } else if (e.keyCode == '39') {
+      nextSlide();
+    }
+  });
 };
 
 Slider(INTERVAL);
