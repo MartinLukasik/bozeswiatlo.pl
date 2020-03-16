@@ -42,7 +42,6 @@ const init = function() {
 let addListeners = function() {
   window.addEventListener('resize', resizeCanvas);
   window.addEventListener('mousemove', updateMouse);
-  window.addEventListener('touchmove', updateMouse);
 };
 
 let updateMouse = function(e) {

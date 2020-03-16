@@ -27,3 +27,15 @@ main {
 .svg-icon {
   margin-right: 0.3rem;
 }
+
+section {
+  margin-top: 4rem;
+}
+
+section:first-of-type {
+  margin-top: 125px;
+}
+
+section:last-child {
+  margin-bottom: 4rem;
+}

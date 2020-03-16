@@ -13,7 +13,7 @@
     <!-- All custom stylesheet below libraries -->
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="./node_modules/aos/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="vendors/css/lightgallery.min.css" />
   </head>
 
@@ -63,11 +63,7 @@
 
     <!-- FullScreen Slider -->
     <div class="slider">
-      <div
-        class="slide current"
-        data-src="img/slider/1.jpg"
-        data-m-src="img/slider/1m.jpg"
-      >
+      <div class="slide current" data-order="1">
         <div class="slide-img"></div>
         <div class="slide-text">
           <h2>Воскресное служение</h2>
@@ -76,7 +72,7 @@
           </h3>
         </div>
       </div>
-      <div class="slide">
+      <div class="slide" data-order="2">
         <div class="slide-img"></div>
         <div class="slide-text">
           <h2>Молодежное служение</h2>
@@ -85,7 +81,7 @@
           </h3>
         </div>
       </div>
-      <div class="slide">
+      <div class="slide" data-order="3">
         <div class="slide-img"></div>
         <div class="slide-text">
           <h2>Евангелизация</h2>
@@ -440,7 +436,7 @@
       </section>
 
       <!-- Social media -->
-      <div class="canvas-wrapper">
+      <section class="canvas-wrapper">
         <canvas id="canvas"></canvas>
         <div class="social-media">
           <h2 data-aos="zoom-in">Мы в соц. сетях</h2>
@@ -457,7 +453,7 @@
             allow="encrypted-media"
           ></iframe>
         </div>
-      </div>
+      </section>
 
       <!-- Bible Quote -->
       <div class="quote">
@@ -471,7 +467,7 @@
       </div>
 
       <!-- Gallery -->
-      <section id="mp-gallery">
+      <div id="mp-gallery">
         <a href="img/gallery/1.jpg"
           ><img src="img/gallery/1.jpg" alt="" height="300"
         /></a>
@@ -484,7 +480,7 @@
         <a href="img/gallery/4.jpg"
           ><img src="img/gallery/4.jpg" alt="" height="300"
         /></a>
-      </section>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -580,7 +576,7 @@
       </div>
     </footer>
 
-    <script defer src="js/main-page.js"></script>
+    <script src="js/main-page.js"></script>
     <script src="js/vendors/lightgallery.min.js"></script>
     <script>
       lightGallery(document.getElementById('mp-gallery'), {});
