@@ -19,7 +19,7 @@ function fetchVerse(callback) {
   const xhr = new XMLHttpRequest();
   xhr.addEventListener('load', callback);
   xhr.addEventListener('error', displayFallback);
-  xhr.open('GET', 'https://bozeswiatlo.herokuapp.com/api/verses/random');
+  xhr.open('GET', '/api/verses/random');
   xhr.send();
 }
 
