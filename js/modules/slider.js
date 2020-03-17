@@ -27,7 +27,8 @@ const Slider = interval => {
 
   const prevSlide = () => {
     const current = document.querySelector('.current');
-    const newCurrent = current.nextElementSibling || slides[slides.length - 1];
+    const newCurrent =
+      current.previousElementSibling || slides[slides.length - 1];
 
     newCurrent.classList.add('current');
     current.classList.remove('current');
