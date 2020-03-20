@@ -1,4 +1,3 @@
-import './modules/css-custom-props';
 import './modules/slider';
 import './modules/scrollHandler';
 import './modules/resonsive-nav';
@@ -7,6 +6,9 @@ import './modules/bible-api';
 import './modules/background-animation';
 
 const cards = document.querySelectorAll('.m-card');
+const slider = document.querySelector('.slider');
+
+slider.style.height = window.innerHeight * 0.01;
 
 cards.forEach(card => addListeners(card));
 
