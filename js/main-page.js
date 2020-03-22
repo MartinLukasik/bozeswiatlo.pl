@@ -8,7 +8,7 @@ import './modules/background-animation';
 const cards = document.querySelectorAll('.m-card');
 const slider = document.querySelector('.slider');
 
-slider.style.height = window.innerHeight * 0.01;
+slider.style.height = `${window.innerHeight}px`;
 
 cards.forEach(card => addListeners(card));
 
