@@ -14,10 +14,10 @@ const mouse = {
   y: 0,
 };
 
-const init = function() {
+function init() {
   addListeners();
 
-  img.onload = function(e) {
+  img.onload = function (e) {
     // Check for firefox.
     imgInfo.width = e.path ? e.path[0].width : e.target.width;
     imgInfo.height = e.path ? e.path[0].height : e.target.height;
@@ -37,25 +37,25 @@ const init = function() {
   };
 
   return (img.src = imgSrc);
-};
+}
 
-let addListeners = function() {
+function addListeners() {
   window.addEventListener('resize', resizeCanvas);
   window.addEventListener('mousemove', updateMouse);
-};
+}
 
-let updateMouse = function(e) {
+function updateMouse(e) {
   mouse.x = e.clientX;
   mouse.y = e.clientY;
-};
+}
 
-let resizeCanvas = function() {
+function resizeCanvas() {
   width = canvas.width = window.innerWidth;
   height = canvas.height = window.innerHeight;
-};
+}
 
 // Magic
-let populateCanvas = function(nb) {
+function populateCanvas(nb) {
   let i = 0;
   return (() => {
     const result = [];
@@ -66,9 +66,9 @@ let populateCanvas = function(nb) {
     }
     return result;
   })();
-};
+}
 
-let createGrid = function() {
+function createGrid() {
   const imgScale = 0.4;
   const grid = {
     row: Math.ceil(window.innerWidth / (imgInfo.width * imgScale)),
@@ -95,22 +95,22 @@ let createGrid = function() {
     }
   }
 
-  return __range__(0, grids.length, false).map(i => grids[i].draw());
-};
+  return __range__(0, grids.length, false).map((i) => grids[i].draw());
+}
 
-let gridItem = function(x, y, w, h) {
+function gridItem(x, y, w, h) {
   if (x == null) {
     x = 0;
   }
   if (y == null) {
     y = 0;
   }
-  this.draw = function() {
+  this.draw = function () {
     ctx.drawImage(img, x, y, w, h);
   };
-};
+}
 
-let Photo = function() {
+function Photo() {
   const seed = Math.random() * 2.5 + 1;
   const w = imgInfo.width / seed;
   const h = imgInfo.height / seed;
@@ -125,7 +125,7 @@ let Photo = function() {
 
   const TO_RADIANS = Math.PI / 180;
 
-  this.update = function() {
+  this.update = function () {
     const x0 = x;
     const y0 = y;
     const x1 = mouse.x;
@@ -146,9 +146,9 @@ let Photo = function() {
   };
   this.draw = () =>
     rotateAndPaintImage(ctx, img, r * TO_RADIANS, x, y, w / 2, h / 2, w, h);
-};
+}
 
-let rotateAndPaintImage = function(
+function rotateAndPaintImage(
   context,
   image,
   angle,
@@ -164,9 +164,9 @@ let rotateAndPaintImage = function(
   context.drawImage(image, -axisX, -axisY, widthX, widthY);
   context.rotate(-angle);
   return context.translate(-positionX, -positionY);
-};
+}
 
-let render = function() {
+function render() {
   let x = 0;
   let y = 0;
   ctx.clearRect(0, 0, width, height);
@@ -181,7 +181,7 @@ let render = function() {
   }
 
   return requestAnimationFrame(render);
-};
+}
 
 function __range__(left, right, inclusive) {
   let range = [];

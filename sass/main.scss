@@ -4,21 +4,14 @@
 @import 'abstracts/variables', 'abstracts/mixins';
 
 // 2. Vendors
-@import 'vendors/flexboxgrid';
+@import 'vendors/flexboxgrid', 'vendors/aos';
 
 // 3. Base stuff
 @import 'base/reset', 'base/base', 'base/typography', 'base/helpers',
-'base/animations';
+  'base/animations';
 
 // 4. Layout-related sections
 @import 'layout/header', 'layout/responsive-nav', 'layout/footer';
-
-// 5. Components
-@import 'components/button', 'components/slider', 'components/ministry-card',
-'components/quote', 'components/main-page-gallery', 'components/team-card',
-'components/social-media', 'components/gallery-slider.scss',
-'components/gallery', 'components/blog-entry.scss', 'components/ministry',
-'components/pagination', 'components/select';
 
 // 6. Page-specific styles
 @import 'pages/home', 'pages/about', 'pages/contact';

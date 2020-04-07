@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Галерея | Христианская церковь Boże światło</title>
+    <title>
+      <%= articleTitle %> | Христианская церковь Boże światło
+    </title>
     <!-- Google fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Old+Standard+TT:400i|Roboto:700&display=swap"
@@ -12,12 +14,8 @@
     />
     <!-- All custom stylesheet below libraries -->
     <link rel="stylesheet" href="sass/main.scss" />
-    <link rel="stylesheet" href="sass/gallery.scss" />
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-
-    <link rel="stylesheet" href="vendors/css/lightgallery.min.css" />
   </head>
-
   <body>
     <header class="page-header sticky row no-gutters center-xs middle-xs">
       <nav class="main-nav col-xs-12 row middle-xs between-xs">
@@ -34,9 +32,7 @@
             <a class="main-nav__link" href="about.html">О нас</a>
           </li>
           <li>
-            <a class="main-nav__link main-nav__link--active" href="gallery.html"
-              >Галерея</a
-            >
+            <a class="main-nav__link" href="gallery.html">Галерея</a>
           </li>
           <li>
             <a class="main-nav__link" href="ministries.html">Служения</a>
@@ -60,21 +56,9 @@
         <a href="testimonials.html">Свидетельства</a>
         <a href="contact.html">Контакты</a>
       </div>
-      <u></u>
     </header>
 
-    <main class="container">
-      <div class="select-wrapper">
-        <div class="select">
-          <select id="gallery-select">
-            <option selected value="">Все фотографии</option>
-            <option value="евангелизации">Евангелизации</option>
-          </select>
-        </div>
-      </div>
-      <div id="gallery"></div>
-      <nav class="pager"></nav>
-    </main>
+    <main class="container"></main>
 
     <!-- Footer -->
     <footer>
@@ -169,10 +153,6 @@
       </div>
     </footer>
 
-    <!-- JS Scripts -->
-    <script src="js/vendors/lightgallery.min.js"></script>
-    <!-- Lightgallery.js Plugins -->
-    <script src="js/vendors/lg-thumbnail.min.js"></script>
-    <script src="js/gallery.js"></script>
+    <script defer src="js/other-pages.js"></script>
   </body>
 </html>
