@@ -18,8 +18,11 @@
     <!-- All custom stylesheet below libraries -->
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="stylesheet" href="sass/home.scss" />
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="vendors/css/lightgallery.min.css" />
+    <link rel="shortcut icon" href="img/favicon.webp" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/lightgallery.js/dist/css/lightgallery.min.css"
+    />
   </head>
 
   <body>
@@ -27,7 +30,7 @@
       <nav class="main-nav col-xs-12 row middle-xs between-xs">
         <div class="logo">
           <a href="index.html"
-            ><img class="logo__img" src="img/logo/logo-white.png" alt=""
+            ><img class="logo__img" src="img/logo/logo-white.webp" alt=""
           /></a>
         </div>
         <ul class="main-nav__links">
@@ -143,7 +146,7 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-lg-6" data-aos="fade-right">
-            <img class="about-image" src="img/about.jpg" alt="" />
+            <img class="about-image" src="img/about.webp" alt="" />
           </div>
           <div class="col-xs-12 col-lg-6 row middle-xs">
             <div class="about-content">
@@ -178,7 +181,7 @@
           <div class="m-card col-xs" data-aos="zoom-in">
             <div
               class="m-card-thumbnail"
-              style="background-image: url(/img/gallery/31.jpg);"
+              style="background-image: url(/img/gallery/31.webp);"
             ></div>
             <div class="m-card-info">
               <h2 class="m-card-title">Воскресное собрание</h2>
@@ -224,7 +227,7 @@
           <div class="m-card col-xs" data-aos="zoom-in" data-aos-delay="200">
             <div
               class="m-card-thumbnail"
-              style="background-image: url(/img/gallery/32.jpg);"
+              style="background-image: url(/img/gallery/32.webp);"
             ></div>
             <div class="m-card-info">
               <h2 class="m-card-title">Общая молитва</h2>
@@ -269,7 +272,7 @@
           <div class="m-card col-xs" data-aos="zoom-in" data-aos-delay="400">
             <div
               class="m-card-thumbnail"
-              style="background-image: url(/img/gallery/33.jpg);"
+              style="background-image: url(/img/gallery/33.webp);"
             ></div>
             <div class="m-card-info">
               <h2 class="m-card-title">Домашняя группа</h2>
@@ -313,7 +316,7 @@
           <div class="m-card col-xs" data-aos="zoom-in">
             <div
               class="m-card-thumbnail"
-              style="background-image: url(/img/gallery/34.jpg);"
+              style="background-image: url(/img/gallery/34.webp);"
             ></div>
             <div class="m-card-info">
               <h2 class="m-card-title">Женское служение</h2>
@@ -354,7 +357,7 @@
           <div class="m-card col-xs" data-aos="zoom-in" data-aos-delay="200">
             <div
               class="m-card-thumbnail"
-              style="background-image: url(/img/gallery/35.jpg);"
+              style="background-image: url(/img/gallery/35.webp);"
             ></div>
             <div class="m-card-info">
               <h2 class="m-card-title">Молодежное служение</h2>
@@ -398,7 +401,7 @@
           <div class="m-card col-xs" data-aos="zoom-in" data-aos-delay="400">
             <div
               class="m-card-thumbnail"
-              style="background-image: url(/img/gallery/36.jpg);"
+              style="background-image: url(/img/gallery/36.webp);"
             ></div>
             <div class="m-card-info">
               <h2 class="m-card-title">Уличная евангелизация</h2>
@@ -468,7 +471,7 @@
         <div class="container">
           <div class="quote-quote"></div>
           <div class="quote-icon">
-            <img src="img/quote-icon.png" alt="" />
+            <img src="img/quote-icon.webp" alt="" />
           </div>
           <div class="quote-src"></div>
         </div>
@@ -476,17 +479,17 @@
 
       <!-- Gallery -->
       <div id="mp-gallery">
-        <a href="img/gallery/1.jpg"
-          ><img src="img/gallery/1.jpg" alt="" height="300"
+        <a href="img/gallery/1.webp"
+          ><img src="img/gallery/1.webp" alt="" height="300"
         /></a>
-        <a href="img/gallery/2.jpg"
-          ><img src="img/gallery/2.jpg" alt="" height="300"
+        <a href="img/gallery/2.webp"
+          ><img src="img/gallery/2.webp" alt="" height="300"
         /></a>
-        <a href="img/gallery/3.jpg"
-          ><img src="img/gallery/3.jpg" alt="" height="300"
+        <a href="img/gallery/3.webp"
+          ><img src="img/gallery/3.webp" alt="" height="300"
         /></a>
-        <a href="img/gallery/4.jpg"
-          ><img src="img/gallery/4.jpg" alt="" height="300"
+        <a href="img/gallery/4.webp"
+          ><img src="img/gallery/4.webp" alt="" height="300"
         /></a>
       </div>
     </main>
@@ -496,7 +499,7 @@
       <div class="main-footer row center-xs">
         <div class="footer-logo col-xs-12 col-sm-6 col-lg-5">
           <a href="index.html">
-            <img src="img/logo/logo-white.png" alt="" />
+            <img src="img/logo/logo-white.webp" alt="" />
           </a>
           <p class="align-center">
             Наша цель: Достигать. Учить. Вдохновлять.
@@ -585,7 +588,7 @@
     </footer>
 
     <script src="js/main-page.js"></script>
-    <script src="js/vendors/lightgallery.min.js"></script>
+    <script src="node_modules/lightgallery.js/dist/js/lightgallery.min.js"></script>
     <script>
       lightGallery(document.getElementById('mp-gallery'));
     </script>

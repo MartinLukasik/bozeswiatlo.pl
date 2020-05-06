@@ -15,9 +15,12 @@
     <!-- All custom stylesheet below libraries -->
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="stylesheet" href="sass/ministries.scss" />
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.webp" type="image/x-icon" />
 
-    <link rel="stylesheet" href="vendors/css/lightgallery.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/lightgallery.js/dist/css/lightgallery.min.css"
+    />
   </head>
 
   <body>
@@ -25,7 +28,7 @@
       <nav class="main-nav col-xs-12 row middle-xs between-xs">
         <div class="logo">
           <a href="index.html"
-            ><img class="logo__img" src="img/logo/logo-white.png" alt=""
+            ><img class="logo__img" src="img/logo/logo-white.webp" alt=""
           /></a>
         </div>
         <ul class="main-nav__links">
@@ -77,9 +80,9 @@
           </p>
         </div>
         <div id="ministry-slider" class="container">
-          <a href="img/gallery/31.jpg" data-aos="fade-right">
+          <a href="img/gallery/31.webp" data-aos="fade-right">
             <article id="1" class="ministry">
-              <img class="ministry-img" src="img/gallery/31.jpg" alt="" />
+              <img class="ministry-img" src="img/gallery/31.webp" alt="" />
               <div class="ministry-text">
                 <h2 class="ministry-title">Воскресное служение</h2>
                 <p class="p">
@@ -94,9 +97,9 @@
             </article>
           </a>
 
-          <a href="img/gallery/32.jpg" data-aos="fade-left">
+          <a href="img/gallery/32.webp" data-aos="fade-left">
             <article id="2" class="ministry">
-              <img class="ministry-img" src="img/gallery/32.jpg" alt="" />
+              <img class="ministry-img" src="img/gallery/32.webp" alt="" />
               <div class="ministry-text">
                 <h2 class="ministry-title">Общая молитва</h2>
                 <p class="p">
@@ -111,9 +114,9 @@
             </article>
           </a>
 
-          <a href="img/gallery/33.jpg" data-aos="fade-right">
+          <a href="img/gallery/33.webp" data-aos="fade-right">
             <article id="3" class="ministry">
-              <img class="ministry-img" src="img/gallery/33.jpg" alt="" />
+              <img class="ministry-img" src="img/gallery/33.webp" alt="" />
               <div class="ministry-text">
                 <h2 class="ministry-title">Домашняя группа</h2>
                 <p class="p">
@@ -126,9 +129,9 @@
             </article>
           </a>
 
-          <a href="img/gallery/34.jpg" data-aos="fade-left">
+          <a href="img/gallery/34.webp" data-aos="fade-left">
             <article id="4" class="ministry">
-              <img class="ministry-img" src="img/gallery/34.jpg" alt="" />
+              <img class="ministry-img" src="img/gallery/34.webp" alt="" />
               <div class="ministry-text">
                 <h2 class="ministry-title">Женское служение</h2>
                 <p class="p">
@@ -138,9 +141,9 @@
             </article>
           </a>
 
-          <a href="img/gallery/35.jpg" data-aos="fade-right">
+          <a href="img/gallery/35.webp" data-aos="fade-right">
             <article id="5" class="ministry">
-              <img class="ministry-img" src="img/gallery/35.jpg" alt="" />
+              <img class="ministry-img" src="img/gallery/35.webp" alt="" />
               <div class="ministry-text">
                 <h2 class="ministry-title">Молодежное собрание</h2>
                 <p class="p">
@@ -153,9 +156,9 @@
             </article>
           </a>
 
-          <a href="img/gallery/36.jpg" data-aos="fade-left">
+          <a href="img/gallery/36.webp" data-aos="fade-left">
             <article id="6" class="ministry">
-              <img class="ministry-img" src="img/gallery/36.jpg" alt="" />
+              <img class="ministry-img" src="img/gallery/36.webp" alt="" />
               <div class="ministry-text">
                 <h2 class="ministry-title">Евангелизация</h2>
                 <p class="p">
@@ -178,7 +181,7 @@
       <div class="main-footer row center-xs">
         <div class="footer-logo col-xs-12 col-sm-6 col-lg-5">
           <a href="index.html">
-            <img src="img/logo/logo-white.png" alt="" />
+            <img src="img/logo/logo-white.webp" alt="" />
           </a>
           <p class="align-center">
             Наша цель: Достигать. Учить. Вдохновлять.
@@ -267,9 +270,9 @@
     </footer>
 
     <script defer src="js/other-pages.js"></script>
-    <script src="js/vendors/lightgallery.min.js"></script>
+    <script src="node_modules/lightgallery.js/dist/js/lightgallery.min.js"></script>
     <!-- Lightgallery.js Plugins -->
-    <script src="js/vendors/lg-thumbnail.min.js"></script>
+    <script src="node_modules/lg-thumbnail.js/dist/lg-thumbnail.min.js"></script>
     <!--  -->
     <script>
       lightGallery(document.getElementById('ministry-slider'), {

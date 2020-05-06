@@ -10,7 +10,7 @@ const slider = document.querySelector('.slider');
 
 slider.style.height = `${window.innerHeight}px`;
 
-cards.forEach(card => addListeners(card));
+cards.forEach((card) => addListeners(card));
 
 function addListeners(card) {
   card.addEventListener('mouseenter', () =>

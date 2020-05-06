@@ -13,9 +13,12 @@
     <!-- All custom stylesheet below libraries -->
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="stylesheet" href="sass/about.scss" />
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/favicon.webp" type="image/x-icon" />
 
-    <link rel="stylesheet" href="vendors/css/lightgallery.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/lightgallery.js/dist/css/lightgallery.min.css"
+    />
   </head>
 
   <body>
@@ -23,7 +26,7 @@
       <nav class="main-nav col-xs-12 row middle-xs between-xs">
         <div class="logo">
           <a href="index.html"
-            ><img class="logo__img" src="img/logo/logo-white.png" alt=""
+            ><img class="logo__img" src="img/logo/logo-white.webp" alt=""
           /></a>
         </div>
         <ul class="main-nav__links">
@@ -72,7 +75,7 @@
           <p class="container p">
             <img
               class="img-float-left"
-              src="img/gallery/16.jpg"
+              src="img/gallery/16.webp"
               alt=""
               width="450"
             />
@@ -98,7 +101,7 @@
           <p class="container p">
             <img
               class="img-float-right"
-              src="img/bapt.jpg"
+              src="img/bapt.webp"
               alt=""
               width="500"
             />
@@ -247,10 +250,10 @@
         </div>
         <div class="row center-xs cols-fixed no-gutters">
           <div class="team-card col-xs" data-aos="flip-left">
-            <img class="card-img" src="/img/card-bg.jpg" alt="" />
+            <img class="card-img" src="/img/card-bg.webp" alt="" />
             <img
               class="profile-img jello-horizontal"
-              src="/img/team/kulko.png"
+              src="/img/team/kulko.webp"
               alt=""
             />
             <h4>Саша Кулько</h4>
@@ -262,10 +265,10 @@
             data-aos="flip-left"
             data-aos-delay="200"
           >
-            <img class="card-img" src="/img/card-bg.jpg" alt="" />
+            <img class="card-img" src="/img/card-bg.webp" alt="" />
             <img
               class="profile-img jello-horizontal"
-              src="/img/team/igor-buben.png"
+              src="/img/team/igor-buben.webp"
               alt=""
             />
             <h4>Игорь Бубен</h4>
@@ -277,10 +280,10 @@
             data-aos="flip-left"
             data-aos-delay="400"
           >
-            <img class="card-img" src="/img/card-bg.jpg" alt="" />
+            <img class="card-img" src="/img/card-bg.webp" alt="" />
             <img
               class="profile-img jello-horizontal"
-              src="/img/team/procuk-marila.png"
+              src="/img/team/procuk-marila.webp"
               alt=""
             />
             <h4>Мария Бубен</h4>
@@ -288,10 +291,10 @@
           </div>
 
           <div class="team-card col-xs" data-aos="flip-left">
-            <img class="card-img" src="/img/card-bg.jpg" alt="" />
+            <img class="card-img" src="/img/card-bg.webp" alt="" />
             <img
               class="profile-img jello-horizontal"
-              src="/img/team/jo-1.jpg"
+              src="/img/team/jo-1.webp"
               alt=""
             />
             <h4>Ян Лукасик</h4>
@@ -303,10 +306,10 @@
             data-aos="flip-left"
             data-aos-delay="200"
           >
-            <img class="card-img" src="/img/card-bg.jpg" alt="" />
+            <img class="card-img" src="/img/card-bg.webp" alt="" />
             <img
               class="profile-img jello-horizontal"
-              src="/img/team/vera.png"
+              src="/img/team/vera.webp"
               alt=""
             />
             <h4>Вера Володина</h4>
@@ -318,10 +321,10 @@
             data-aos="flip-left"
             data-aos-delay="400"
           >
-            <img class="card-img" src="/img/card-bg.jpg" alt="" />
+            <img class="card-img" src="/img/card-bg.webp" alt="" />
             <img
               class="profile-img jello-horizontal"
-              src="/img/team/anna.png"
+              src="/img/team/anna.webp"
               alt=""
             />
             <h4>Aнна Троць</h4>
@@ -355,7 +358,7 @@
       <div class="main-footer row center-xs">
         <div class="footer-logo col-xs-12 col-sm-6 col-lg-5">
           <a href="index.html">
-            <img src="img/logo/logo-white.png" alt="" />
+            <img src="img/logo/logo-white.webp" alt="" />
           </a>
           <p class="align-center">
             Наша цель: Достигать. Учить. Вдохновлять.
@@ -444,9 +447,9 @@
     </footer>
 
     <script defer src="js/other-pages.js"></script>
-    <script src="js/vendors/lightgallery.min.js"></script>
+    <script src="node_modules/lightgallery.js/dist/js/lightgallery.min.js"></script>
     <!-- Lightgallery.js Plugins -->
-    <script src="js/vendors/lg-thumbnail.min.js"></script>
+    <script src="node_modules/lg-thumbnail.js/dist/lg-thumbnail.min.js"></script>
     <!--  -->
     <script>
       lightGallery(document.querySelector('.gallery-slider'), {

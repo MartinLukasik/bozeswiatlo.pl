@@ -6,7 +6,7 @@ function changeVerse() {
     quote.textContent = verse.quote;
     quoteSrc.textContent = verse.src;
   } catch (e) {
-    console.error(`Cannot fetch api: ${e.message}`);
+    console.warn(`Cannot fetch api: ${e.message}`);
     displayFallback();
   }
 }

@@ -1,4 +1,4 @@
-import imgSrc from '../../img/canvas-bg.jpg';
+import imgSrc from '../../img/canvas-bg.webp';
 
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
