@@ -26,6 +26,15 @@
   </head>
 
   <body>
+    <!-- FACEBOOK PAGE PLUGIN -->
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0&appId=1534253366726332"
+    ></script>
+
     <header class="page-header row no-gutters center-xs middle-xs">
       <nav class="main-nav col-xs-12 row middle-xs between-xs">
         <div class="logo">
@@ -452,17 +461,28 @@
         <div class="social-media">
           <h2 data-aos="zoom-in">Мы в соц. сетях</h2>
           <!-- Facebook page plugin -->
-          <iframe
+          <div
             data-aos="swirl-in"
-            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fbozeswiatlolublin&tabs&width=320&height=130&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId=1534253366726332"
-            width="320"
-            height="130"
-            style="border: none; overflow: hidden;"
-            scrolling="no"
-            frameborder="0"
-            allowTransparency="true"
-            allow="encrypted-media"
-          ></iframe>
+            class="fb-page"
+            data-href="https://www.facebook.com/bozeswiatlolublin/"
+            data-tabs=""
+            data-width=""
+            data-height=""
+            data-small-header="false"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="true"
+          >
+            <blockquote
+              cite="https://www.facebook.com/bozeswiatlolublin/"
+              class="fb-xfbml-parse-ignore"
+            >
+              <a href="https://www.facebook.com/bozeswiatlolublin/"
+                >Церква &quot;Боже світло&quot;/Kościół Chrześcijański
+                &quot;Boże Światło&quot;</a
+              >
+            </blockquote>
+          </div>
         </div>
       </section>
 
