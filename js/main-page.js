@@ -3,7 +3,6 @@ import './modules/scrollHandler';
 import './modules/resonsive-nav';
 import './modules/aos';
 import './modules/bible-api';
-import './modules/background-animation';
 
 const cards = document.querySelectorAll('.m-card');
 const slider = document.querySelector('.slider');

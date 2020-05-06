@@ -14,7 +14,7 @@ const mouse = {
   y: 0,
 };
 
-function init() {
+export function init() {
   addListeners();
 
   img.onload = function (e) {
@@ -192,5 +192,3 @@ function __range__(left, right, inclusive) {
   }
   return range;
 }
-
-init();
