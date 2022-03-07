@@ -43,6 +43,7 @@
     "dev": "parcel index.html --no-hmr",
     "devopen": "parcel index.html --no-hmr --open",
     "build": "parcel build index.html --dist-dir ./build",
+    "serve": "live-server build",
     "convert-jpg": "find ./img -type f -name '*.jpg' | xargs -P 8 -I {} sh -c 'cwebp -q 95 $1 -o \"${1%.jpg}.webp\"' _ {} \\;",
     "convert-png": "find ./img -type f -name '*.png' | xargs -P 8 -I {} sh -c 'cwebp -q 95 $1 -o \"${1%.png}.webp\"' _ {} \\;"
   }
