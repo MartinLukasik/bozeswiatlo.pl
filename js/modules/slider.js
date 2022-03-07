@@ -3,19 +3,6 @@ const INTERVAL = 9000;
 const Slider = interval => {
   const slides = document.querySelectorAll('.slide');
 
-  document.getElementById('next').addEventListener('click', () => {
-    nextSlide();
-    clearInterval(intervalID);
-    intervalID = setInterval(nextSlide, interval);
-  });
-  document.getElementById('prev').addEventListener('click', () => {
-    prevSlide();
-    clearInterval(intervalID);
-    intervalID = setInterval(nextSlide, interval);
-  });
-
-  intervalID = setInterval(nextSlide, interval);
-
   const nextSlide = () => {
     const current = document.querySelector('.current');
     const newCurrent = current.nextElementSibling || slides[0];
@@ -36,6 +23,19 @@ const Slider = interval => {
   };
 
   let intervalID = setInterval(nextSlide, interval);
+
+  document.getElementById('next').addEventListener('click', () => {
+    nextSlide();
+    clearInterval(intervalID);
+    intervalID = setInterval(nextSlide, interval);
+  });
+  document.getElementById('prev').addEventListener('click', () => {
+    prevSlide();
+    clearInterval(intervalID);
+    intervalID = setInterval(nextSlide, interval);
+  });
+
+
   document.addEventListener('keydown', e => {
     if (e.keyCode == '37') {
       prevSlide();
