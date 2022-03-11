@@ -1,0 +1,17 @@
+// @charset 'UTF-8';
+
+// // 1. Configuration and helpers
+@import 'abstracts/variables', 'abstracts/mixins';
+
+// // 2. Vendors
+@import 'vendors/flexboxgrid';
+
+// // 3. Base stuff
+@import 'base/reset', 'base/base', 'base/typography', 'base/helpers',
+  'base/animations';
+
+// // 4. Layout-related sections
+@import 'layout/header', 'layout/responsive-nav', 'layout/footer';
+
+// // 6. Page-specific styles
+@import 'pages/home', 'pages/about', 'pages/contact';

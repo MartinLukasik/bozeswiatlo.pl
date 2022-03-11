@@ -1,0 +1,1 @@
+{"version":3,"file":"component---src-pages-404-tsx-2a23c30c7b80c35c42aa.js","mappings":"0IAMA,UAJqB,WACnB,OAAO","sources":["webpack://bozeswiatlo.pl/./src/pages/404.tsx"],"sourcesContent":["import React from 'react'\n\nconst NotFoundPage = () => {\n  return <main>404 not found</main>\n}\n\nexport default NotFoundPage\n"],"names":[],"sourceRoot":""}
