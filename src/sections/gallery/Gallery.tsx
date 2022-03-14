@@ -22,11 +22,16 @@ export function Gallery() {
 
   const pages = Math.ceil(images.length / IMAGES_PER_PAGE)
 
+  function handleTagChange(e: React.ChangeEvent<HTMLSelectElement>) {
+    setTag(e.target.value)
+    setPage(0)
+  }
+
   return (
     <>
       <div className="select-wrapper">
         <div className="select">
-          <select id="gallery-select" onChange={e => setTag(e.target.value)}>
+          <select id="gallery-select" onChange={handleTagChange}>
             <option selected value="">
               Все фотографии
             </option>
@@ -35,6 +40,7 @@ export function Gallery() {
         </div>
       </div>
       <LightGallery
+        key={tag + page}
         elementClassNames="gallery"
         speed={500}
         plugins={[lgThumbnail]}

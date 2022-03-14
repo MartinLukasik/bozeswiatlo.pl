@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { AnchorLink } from 'gatsby-plugin-anchor-links'
 
 export function Ministries() {
   return (
@@ -57,9 +58,9 @@ export function Ministries() {
               служения мы обычно имеем возможность пообщаться за чашкой чая с
               вкуснейшеми бутербродами и печеньками.
             </p>
-            <Link className="m-card-link" to="/ministries#1">
+            <AnchorLink className="m-card-link" to="/ministries#first">
               Детали
-            </Link>
+            </AnchorLink>
           </div>
         </div>
 
@@ -107,9 +108,9 @@ export function Ministries() {
               просьбы и благодарения Богу за исполненние нужды (слава Богу у нас
               нет в них недостатка) нашему Спасителю.
             </p>
-            <Link className="m-card-link" to="/ministries#2">
+            <AnchorLink className="m-card-link" to="/ministries#second">
               Детали
-            </Link>
+            </AnchorLink>
           </div>
         </div>
 
@@ -156,9 +157,9 @@ export function Ministries() {
               неделя и также пытаемся розяснить неясные отрывки из прочитанного
               в священном писании.
             </p>
-            <Link className="m-card-link" to="/ministries#3">
+            <AnchorLink className="m-card-link" to="/ministries#third">
               Детали
-            </Link>
+            </AnchorLink>
           </div>
         </div>
 
@@ -200,9 +201,9 @@ export function Ministries() {
               Żelazowej Woli 5/24
             </h3>
             <p className="txt"></p>
-            <Link className="m-card-link" to="/ministries#4">
+            <AnchorLink className="m-card-link" to="/ministries#fourth">
               Детали
-            </Link>
+            </AnchorLink>
           </div>
         </div>
 
@@ -249,9 +250,9 @@ export function Ministries() {
               настольные игры, ну и конечно все это время нас сопровождает
               вкуснейшее бесплатное угощение.
             </p>
-            <Link className="m-card-link" to="/ministries#5">
+            <AnchorLink className="m-card-link" to="/ministries#fifth">
               Детали
-            </Link>
+            </AnchorLink>
           </div>
         </div>
 
@@ -299,9 +300,9 @@ export function Ministries() {
               интересуется кто мы такие и что здесь делаем, мы расказуем ему про
               нашу церковь и с радостью отвечаем на все задаваемые вопросы.
             </p>
-            <Link className="m-card-link" to="/ministries#6">
+            <AnchorLink className="m-card-link" to="/ministries#sixth">
               Детали
-            </Link>
+            </AnchorLink>
           </div>
         </div>
       </div>

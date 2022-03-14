@@ -43,9 +43,8 @@ export function Header({ path }: Props) {
           {NAVIGATION.map(link => (
             <li key={link.to}>
               <Link
-                className={clsx('main-nav__link', {
-                  'main-nav__link--active': path === link.to,
-                })}
+                className="main-nav__link"
+                activeClassName="main-nav__link--active"
                 to={link.to}
               >
                 {link.name}

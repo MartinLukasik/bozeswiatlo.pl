@@ -6,6 +6,7 @@ import { Social } from '../sections/index/Social'
 import { BibleQuote } from '../sections/index/BibleQuote'
 import { AboutUs } from '../sections/index/AboutUs'
 import '../sass/home.scss'
+import { SEO } from '../components/SEO'
 
 const IndexPage = () => {
   useEffect(() => {
@@ -14,6 +15,7 @@ const IndexPage = () => {
 
   return (
     <main>
+      <SEO />
       <FullscreenSlider />
       <AboutUs />
       <Ministries />

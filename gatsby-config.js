@@ -2,9 +2,10 @@
 module.exports = {
   siteMetadata: {
     title: `new`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.bozeswiatlo.pl`,
   },
   plugins: [
+    'gatsby-plugin-anchor-links',
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-google-analytics',
@@ -25,6 +26,5 @@ module.exports = {
       __key: 'images',
     },
     'gatsby-plugin-breakpoints',
-    'gatsby-plugin-anchor-links',
   ],
 }

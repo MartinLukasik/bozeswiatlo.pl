@@ -192,3 +192,5 @@ function __range__(left, right, inclusive) {
   }
   return range
 }
+
+init()

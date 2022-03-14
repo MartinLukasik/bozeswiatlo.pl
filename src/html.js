@@ -23,6 +23,14 @@ export default function HTML(props) {
         {props.headComponents}
       </head>
       <body {...props.bodyAttributes}>
+        <div id="fb-root"></div>
+        <script
+          type="module"
+          async
+          defer
+          crossOrigin="anonymous"
+          src="https://connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v7.0&appId=1534253366726332"
+        ></script>
         {props.preBodyComponents}
         <div
           key={`body`}

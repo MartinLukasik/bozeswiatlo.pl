@@ -1,9 +1,6 @@
-import './modules/background-animation'
+import { init } from './modules/background-animation'
 
 const cards = document.querySelectorAll('.m-card')
-const slider = document.querySelector('.slider')
-
-slider.style.height = `${window.innerHeight}px`
 
 cards.forEach(card => addListeners(card))
 
@@ -18,3 +15,5 @@ function addListeners(card) {
     }, 200)
   )
 }
+
+init()

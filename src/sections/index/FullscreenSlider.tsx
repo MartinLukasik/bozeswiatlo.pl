@@ -32,7 +32,7 @@ function FullscreenSliderComponent() {
     }
   }, [index, setIndex])
 
-  const slides = breakpoints.xs ? MOBILE_SLIDES : DESKTOP_SLIDES
+  const slides = breakpoints.sm ? MOBILE_SLIDES : DESKTOP_SLIDES
   const slideImage = slides[index % slides.length]
   const announcement = ANNOUNCEMENTS[index % ANNOUNCEMENTS.length]
 
@@ -101,4 +101,6 @@ function FullscreenSliderComponent() {
   )
 }
 
-export const FullscreenSlider = withBreakpoints(FullscreenSliderComponent)
+const Component = withBreakpoints(FullscreenSliderComponent)
+
+export const FullscreenSlider = () => <Component breakpoints={{}} />

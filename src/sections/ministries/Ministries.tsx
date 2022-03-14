@@ -1,7 +1,15 @@
 import React from 'react'
+import LightGallery from 'lightgallery/react'
+
+// import styles
+import 'lightgallery/css/lightgallery.css'
+import 'lightgallery/css/lg-thumbnail.css'
+
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
 
 const MINISTRIES = [
   {
+    id: 'first',
     title: 'Воскресное служение',
     imageSrc: '/img/gallery/31.webp',
     text: `Воскресное собрание проходить согласно протестантской
@@ -12,6 +20,7 @@ const MINISTRIES = [
           за чашкой чая с вкуснейшеми бутербродами и печеньками.`,
   },
   {
+    id: 'second',
     title: 'Общая молитва',
     imageSrc: '/img/gallery/32.webp',
     text: `Время общих молитв мы посвящаем на совместную молитву Господу
@@ -22,6 +31,7 @@ const MINISTRIES = [
           нашему Спасителю.`,
   },
   {
+    id: 'third',
     title: 'Домашняя группа',
     imageSrc: '/img/gallery/33.webp',
     text: `Домашние группы предназначены для просто дружеского общения и
@@ -30,11 +40,13 @@ const MINISTRIES = [
           прочитанного в священном писании.`,
   },
   {
+    id: 'fourth',
     title: 'Женское служение',
     imageSrc: '/img/gallery/34.webp',
     text: ``,
   },
   {
+    id: 'fifth',
     title: 'Молодежное собрание',
     imageSrc: '/img/gallery/35.webp',
     text: `На молодёжках мы проводим дискуссии на различные
@@ -43,6 +55,7 @@ const MINISTRIES = [
           сопровождает вкуснейшее бесплатное угощение.`,
   },
   {
+    id: 'sixth',
     title: 'Евангелизация',
     imageSrc: '/img/gallery/36.webp',
     text: `Пятничные евангелизации это особо важные события, мы
@@ -63,14 +76,18 @@ export default function Ministries() {
           Информация о проводимых Церковью служениях и мероприятиях
         </p>
       </div>
-      <div id="ministry-slider" className="container">
+      <LightGallery
+        elementClassNames="container ministry-slider"
+        speed={500}
+        plugins={[lgThumbnail]}
+      >
         {MINISTRIES.map((ministry, index) => (
           <a
             key={ministry.title}
             href={ministry.imageSrc}
             data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
           >
-            <article id="1" className="ministry">
+            <article id={`${index + 1}`} className="ministry">
               <img className="ministry-img" src={ministry.imageSrc} alt="" />
               <div className="ministry-text">
                 <h2 className="ministry-title">{ministry.title}</h2>
@@ -79,7 +96,7 @@ export default function Ministries() {
             </article>
           </a>
         ))}
-      </div>
+      </LightGallery>
     </section>
   )
 }
