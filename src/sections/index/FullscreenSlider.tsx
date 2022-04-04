@@ -38,7 +38,7 @@ function FullscreenSliderComponent() {
 
   return (
     <>
-      <div className="slider">
+      <div className="slider" style={{ height: window.innerHeight }}>
         <div key={index} className={'slide current'}>
           <div
             className={clsx('slide-img', {
