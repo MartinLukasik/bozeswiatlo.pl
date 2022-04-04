@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkbozeswiatlo_pl=self.webpackChunkbozeswiatlo_pl||[]).push([[218],{9786:function(e,n,t){t.r(n);var l=t(7294);n.default=function(){return l.createElement("main",null,"404 not found")}}}]);
-//# sourceMappingURL=component---src-pages-404-tsx-2a23c30c7b80c35c42aa.js.map
