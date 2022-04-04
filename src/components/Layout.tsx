@@ -11,11 +11,13 @@ export function Layout(props: PageProps & { '*': string }) {
     AOS.init()
   }, [])
 
-  const path = typeof window === 'undefined' ? `/${props['*']}` : props.path
+  if (typeof window === 'undefined') {
+    return null
+  }
 
   return (
     <div className="page-wrapper">
-      <Header path={path} />
+      <Header path={props.path} />
       {props.children}
       <Footer />
     </div>
