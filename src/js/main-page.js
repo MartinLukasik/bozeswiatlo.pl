@@ -1,5 +1,3 @@
-import { init } from './modules/background-animation'
-
 const cards = document.querySelectorAll('.m-card')
 
 cards.forEach(card => addListeners(card))
@@ -15,5 +13,3 @@ function addListeners(card) {
     }, 200)
   )
 }
-
-init()

@@ -32,9 +32,7 @@ export function Gallery() {
       <div className="select-wrapper">
         <div className="select">
           <select id="gallery-select" onChange={handleTagChange}>
-            <option selected value="">
-              Все фотографии
-            </option>
+            <option value="">Все фотографии</option>
             <option value="евангелизации">Евангелизации</option>
           </select>
         </div>

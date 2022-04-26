@@ -1,0 +1,42 @@
+[
+  {
+    "title": "Недільне служіння",
+    "subtitle": "Неділя, 11:00",
+    "address": "Świętokrzyska 19A, Lublin",
+    "mobileSrc": "/img/ministries/1m.jpeg",
+    "desktopSrc": "/img/ministries/1.jpg",
+    "link": ""
+  },
+  {
+    "title": "Молитва",
+    "subtitle": "Понеділок, 19:00",
+    "address": "Świętokrzyska 19A, Lublin",
+    "mobileSrc": "/img/ministries/2m.jpeg",
+    "desktopSrc": "/img/ministries/2.jpeg",
+    "link": ""
+  },
+  {
+    "title": "Домашні групи",
+    "subtitle": "Вівторок, 18:30",
+    "address": "Żelazowej Woli 5/24, Lublin",
+    "mobileSrc": "/img/slider/2m.webp",
+    "desktopSrc": "/img/ministries/3.jpeg",
+    "link": ""
+  },
+  {
+    "title": "Молодіжне служіння",
+    "subtitle": "Четвер, 18:30",
+    "address": "Świętokrzyska 19A, Lublin",
+    "mobileSrc": "/img/ministries/4m.jpeg",
+    "desktopSrc": "/img/ministries/4.jpeg",
+    "link": ""
+  },
+  {
+    "title": "Молитва за Україну",
+    "subtitle": "Пʼятниця, 18:30",
+    "address": "Plac Litewski, Lublin",
+    "mobileSrc": "/img/ministries/5m.jpeg",
+    "desktopSrc": "/img/ministries/5.jpg",
+    "link": ""
+  }
+]
