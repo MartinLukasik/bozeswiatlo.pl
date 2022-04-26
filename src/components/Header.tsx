@@ -2,15 +2,7 @@ import React, { useMemo, useState } from 'react'
 import { Link } from 'gatsby'
 import clsx from 'clsx'
 import { useScroll } from '../contexts/ScrollProvider'
-
-const NAVIGATION = [
-  { name: 'Главная', to: '/' },
-  { name: 'О нас', to: '/about' },
-  { name: 'Галерея', to: '/gallery' },
-  { name: 'Служения', to: '/ministries' },
-  { name: 'Свидетельства', to: '/testimonials' },
-  { name: 'Контакты', to: '/contact' },
-]
+import navigation from '../data/navigation.json'
 
 type Props = {
   path: string
@@ -40,7 +32,7 @@ export function Header({ path }: Props) {
           </Link>
         </div>
         <ul className="main-nav__links">
-          {NAVIGATION.map(link => (
+          {navigation.map(link => (
             <li key={link.to}>
               <Link
                 className="main-nav__link"
@@ -62,7 +54,7 @@ export function Header({ path }: Props) {
         </div>
       </nav>
       <div className={clsx('responsive-nav', { 'active-nav': open })}>
-        {NAVIGATION.map(link => (
+        {navigation.map(link => (
           <Link key={link.to} to={link.to}>
             {link.name}
           </Link>

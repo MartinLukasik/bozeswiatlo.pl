@@ -1,0 +1,8 @@
+[
+  { "name": "Головна", "to": "/" },
+  { "name": "Про нас", "to": "/about" },
+  { "name": "Галерея", "to": "/gallery" },
+  { "name": "Служіння", "to": "/ministries" },
+  { "name": "Наші проекти", "to": "/projects" },
+  { "name": "Контакти", "to": "/contact" }
+]

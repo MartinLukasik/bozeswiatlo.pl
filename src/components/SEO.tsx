@@ -1,5 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import seo from '../data/seo.json'
 
 type Props = {
   title?: string
@@ -9,15 +10,10 @@ type Props = {
 export function SEO({ title, description }: Props) {
   return (
     <Helmet>
-      <title>
-        {title || 'Христианская церковь в городе Люблин | Boże Światło'}
-      </title>
+      <title>{title || seo['default'].title}</title>
       <meta
         name="description"
-        content={
-          description ||
-          'Церковь Божий Свет это христианская пятидесятническая община в городе Люблин, мы всегда открыты для новых людей'
-        }
+        content={description || seo['default'].description}
       />
     </Helmet>
   )

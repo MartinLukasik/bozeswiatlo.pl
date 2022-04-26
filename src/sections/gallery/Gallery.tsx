@@ -8,7 +8,7 @@ import 'lightgallery/css/lg-thumbnail.css'
 
 import lgThumbnail from 'lightgallery/plugins/thumbnail'
 
-import IMAGES from '../../gallery-sources'
+import gallery from '../../data/gallery.json'
 
 const IMAGES_PER_PAGE = 12
 
@@ -17,7 +17,9 @@ export function Gallery() {
   const [tag, setTag] = useState('')
 
   const images = useMemo(() => {
-    return IMAGES.filter(image => tag === '' || image.tags.includes(tag))
+    return gallery.images.filter(
+      image => tag === '' || image.tags.includes(tag)
+    )
   }, [tag])
 
   const pages = Math.ceil(images.length / IMAGES_PER_PAGE)
@@ -32,10 +34,12 @@ export function Gallery() {
       <div className="select-wrapper">
         <div className="select">
           <select id="gallery-select" onChange={handleTagChange}>
-            <option selected value="">
-              Все фотографии
-            </option>
-            <option value="евангелизации">Евангелизации</option>
+            <option value="">Усі фотографії</option>
+            {gallery.tags.map(tag => (
+              <option key={tag} value={tag}>
+                {tag}
+              </option>
+            ))}
           </select>
         </div>
       </div>

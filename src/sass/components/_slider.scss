@@ -1,5 +1,4 @@
 $bg-scaling-duration: 10s;
-$slide-text-height: 7.4rem;
 
 // Fixing vieports units on mobile bug
 .slider {
@@ -39,20 +38,29 @@ $slide-text-height: 7.4rem;
   bottom: -300px;
   left: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  @include size(100%, $slide-text-height);
-  padding-left: 2%;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.5rem 1rem;
   background-color: rgba(255, 255, 255, 0.8);
   color: $main-font-color;
   opacity: 0;
   transition: all 0.7s ease-in-out 0.3s;
+  > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   h2 {
     font-size: 1.75rem;
     margin-bottom: 0.1rem;
   }
   h3 {
     font-size: 1.3rem;
+    font-weight: normal;
+  }
+  h4 {
+    font-size: 1.2rem;
+    font-style: italic;
     font-weight: normal;
   }
 }
@@ -95,9 +103,9 @@ $slide-text-height: 7.4rem;
     bottom: 55px;
     width: 550px;
     left: -550px;
+    padding: 0.8rem 1.5rem;
     h2 {
       font-size: 1.85rem;
-      margin-bottom: 0.4rem;
     }
   }
   .current {

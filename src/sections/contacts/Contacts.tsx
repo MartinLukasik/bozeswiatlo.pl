@@ -1,26 +1,32 @@
 import React from 'react'
+import contactInfo from '../../data/contact-info.json'
 
 export function Contacts() {
   return (
     <section className="contact" data-aos="zoom-in">
       <div className="container">
         <div className="section-title-container">
-          <h2 className="section-title">Контактная информация</h2>
+          <h2 className="section-title">Контактна інформація</h2>
         </div>
         <div className="row">
-          <div className="col-xs-12 col-md-4 contact-entry">
+          <div className="col-xs-12 col-md-3 contact-entry">
             <p>
-              Адрес: <span>Lubartowska 39, Lublin</span>
+              Адреса: <span>{contactInfo.address}</span>
             </p>
           </div>
-          <div className="col-xs-12 col-md-4 contact-entry">
+          <div className="col-xs-12 col-md-3 contact-entry">
             <p>
-              Телефон: <span>+48 796 922 453</span>
+              Телефон: <span>{contactInfo.tel}</span>
             </p>
           </div>
-          <div className="col-xs-12 col-md-4 contact-entry">
+          <div className="col-xs-12 col-md-3 contact-entry">
             <p>
-              Электронная почта: <span>bozeswiatlolublin@gmail.com</span>
+              Електронна пошта: <span>{contactInfo.email}</span>
+            </p>
+          </div>
+          <div className="col-xs-12 col-md-3 contact-entry">
+            <p>
+              Інстаграм: <span>{contactInfo.instagram}</span>
             </p>
           </div>
         </div>

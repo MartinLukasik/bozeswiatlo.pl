@@ -61,9 +61,12 @@ $m-card-thumbnail-height: 13.5rem;
   font-size: 0.85rem;
   color: $main-font-light-color;
 }
-.m-card-time,
-.m-card-location {
+.m-card-date,
+.m-card-time {
   margin-right: 0.4rem;
+  display: inline-block;
+}
+.m-card-location {
   display: inline-block;
   opacity: 0;
   transition: $timing-2;
@@ -76,6 +79,10 @@ $m-card-thumbnail-height: 13.5rem;
   font-size: 0.95rem;
   opacity: 0;
   transition: $timing-2;
+}
+.markdown p {
+  font-size: 0.95rem;
+  text-align: initial;
 }
 
 .m-card-link {

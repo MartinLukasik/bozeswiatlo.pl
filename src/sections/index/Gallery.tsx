@@ -14,17 +14,17 @@ export function Gallery() {
       speed={500}
       plugins={[lgThumbnail]}
     >
-      <a href="/img/gallery/1.webp">
-        <img src="/img/gallery/1.webp" alt="" height="300" />
+      <a href="/img/ministries/1.jpg">
+        <img src="/img/ministries/1.jpg" alt="" height="300" />
       </a>
-      <a href="/img/gallery/2.webp">
-        <img src="/img/gallery/2.webp" alt="" height="300" />
+      <a href="/img/ministries/2.jpeg">
+        <img src="/img/ministries/2.jpeg" alt="" height="300" />
       </a>
-      <a href="/img/gallery/3.webp">
-        <img src="/img/gallery/3.webp" alt="" height="300" />
+      <a href="/img/ministries/4.jpeg">
+        <img src="/img/ministries/4.jpeg" alt="" height="300" />
       </a>
-      <a href="/img/gallery/4.webp">
-        <img src="/img/gallery/4.webp" alt="" height="300" />
+      <a href="/img/ministries/5.jpg">
+        <img src="/img/ministries/5.jpg" alt="" height="300" />
       </a>
     </LightGallery>
   )
